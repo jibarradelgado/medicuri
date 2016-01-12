@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" version="3.2" folio="22" fecha="2013-02-20T05:56:27" sello="K9cYdqPJvUxzqvxpotmaLoFe79kiPttS/9bexfOXJdbfKMcdAiF+5jp9RVfQ+p6kgvG9O5Mf8igy5sOimZy9lVK7m5A7cyVey72ihg5+7EueOuyRphIotlhlEsS+AmILa/jxpnE0VVRoA2OkS6afMo44Vbyz+yLWdza2QhkAAqE=" LugarExpedicion="Colima,Colima" formaDePago="Pago en una sola exhibición" noCertificado="20001000000100005867" certificado="MIIEdDCCA1ygAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDU4NjcwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMjA3MjcxNzAyMDBaFw0xNjA3MjcxNzAyMDBaMIHbMSkwJwYDVQQDEyBBQ0NFTSBTRVJWSUNJT1MgRU1QUkVTQVJJQUxFUyBTQzEpMCcGA1UEKRMgQUNDRU0gU0VSVklDSU9TIEVNUFJFU0FSSUFMRVMgU0MxKTAnBgNVBAoTIEFDQ0VNIFNFUlZJQ0lPUyBFTVBSRVNBUklBTEVTIFNDMSUwIwYDVQQtExxBQUEwMTAxMDFBQUEgLyBIRUdUNzYxMDAzNFMyMR4wHAYDVQQFExUgLyBIRUdUNzYxMDAzTURGUk5OMDkxETAPBgNVBAsTCFVuaWRhZCAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2TTQSPONBOVxpXv9wLYo8jezBrb34i/tLx8jGdtyy27BcesOav2c1NS/Gdv10u9SkWtwdy34uRAVe7H0a3VMRLHAkvp2qMCHaZc4T8k47Jtb9wrOEh/XFS8LgT4y5OQYo6civfXXdlvxWU/gdM/e6I2lg6FGorP8H4GPAJ/qCNwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEATxMecTpMbdhSHo6KVUg4QVF4Op2IBhiMaOrtrXBdJgzGotUFcJgdBCMjtTZXSlq1S4DG1jr8p4NzQlzxsdTxaB8nSKJ4KEMgIT7E62xRUj15jI49qFz7f2uMttZLNThipunsN/NF1XtvESMTDwQFvas/Ugig6qwEfSZc0MDxMpKLEkEePmQwtZD+zXFSMVa6hmOu4M+FzGiRXbj4YJXn9Myjd8xbL/c+9UIcrYoZskxDvMxc6/6M3rNNDY3OFhBK+V/sPMzWWGt8S1yjmtPfXgFs1t65AZ2hcTwTAuHrKwDatJ1ZPfa482ZBROAAX1waz7WwXp0gso7sDCm2/yUVww==" subTotal="7.19" descuento="0.00" total="7.19" metodoDePago="Efectivo" tipoDeComprobante="ingreso" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cfdi="http://www.sat.gob.mx/cfd/3">
+  <cfdi:Emisor rfc="MEDI801107U67" nombre="Medicuri SA de CV">
+    <cfdi:DomicilioFiscal calle="Ave Las Palmas" municipio="Colima" estado="Colima" pais="Mexico" codigoPostal="44860" />
+    <cfdi:ExpedidoEn colonia="Conocidocol" localidad="Colima" municipio="Colima" estado="Colima" pais="México" codigoPostal="44510" />
+    <cfdi:RegimenFiscal Regimen="PERSONAS MORALES DEL RÉGIMEN GENERAL" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="MOTC820522PC7" nombre="Prueba Prueba">
+    <cfdi:Domicilio calle="Prueba" noExterior="125" noInterior="5" colonia="Conocidocol" localidad="Colima" municipio="Colima" estado="Colima" pais="Mexico" codigoPostal="25102" />
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="1.000000" unidad="pieza" noIdentificacion="75008543" descripcion="SULFATO FERROSO 50 Tabletas 200 mg" valorUnitario="4.130000" importe="4.130000" />
+    <cfdi:Concepto cantidad="1.000000" unidad="pieza" noIdentificacion="75008550" descripcion="ÁCIDO FÓLICO 20 tabletas 5 mg" valorUnitario="3.060000" importe="3.060000" />
+  </cfdi:Conceptos>
+  <cfdi:Impuestos />
+  <cfdi:Complemento />
+</cfdi:Comprobante>

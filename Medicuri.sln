@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicuri", "Medicuri\Medicuri.csproj", "{77992F70-E1A0-4610-90FA-39AD75851390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedNeg", "MedNeg\MedNeg.csproj", "{7157CDC1-0D43-4401-8088-3BB9B87DACD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedDAL", "MedDAL\MedDAL.csproj", "{EA451F5A-F4CD-4EC6-809D-14D98692AE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLFactura", "..\..\Escritorio\FacturaDesktop\XMLFactura\XMLFactura\XMLFactura.csproj", "{297506CD-9381-4204-A9AA-846E8BFCAA60}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://bioxor.zapto.org:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MedDAL\\MedDAL.csproj
+		SccProjectName1 = MedDAL
+		SccLocalPath1 = MedDAL
+		SccProjectUniqueName2 = Medicuri\\Medicuri.csproj
+		SccProjectName2 = Medicuri
+		SccLocalPath2 = Medicuri
+		SccProjectUniqueName3 = MedNeg\\MedNeg.csproj
+		SccProjectName3 = MedNeg
+		SccLocalPath3 = MedNeg
+		SccProjectUniqueName4 = ..\\..\\Escritorio\\FacturaDesktop\\XMLFactura\\XMLFactura\\XMLFactura.csproj
+		SccProjectName4 = ../FacturaDesktop/XMLFactura/XMLFactura
+		SccLocalPath4 = ..\\..\\Escritorio\\FacturaDesktop\\XMLFactura\\XMLFactura
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77992F70-E1A0-4610-90FA-39AD75851390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77992F70-E1A0-4610-90FA-39AD75851390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77992F70-E1A0-4610-90FA-39AD75851390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77992F70-E1A0-4610-90FA-39AD75851390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7157CDC1-0D43-4401-8088-3BB9B87DACD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7157CDC1-0D43-4401-8088-3BB9B87DACD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7157CDC1-0D43-4401-8088-3BB9B87DACD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7157CDC1-0D43-4401-8088-3BB9B87DACD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA451F5A-F4CD-4EC6-809D-14D98692AE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA451F5A-F4CD-4EC6-809D-14D98692AE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA451F5A-F4CD-4EC6-809D-14D98692AE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA451F5A-F4CD-4EC6-809D-14D98692AE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{297506CD-9381-4204-A9AA-846E8BFCAA60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297506CD-9381-4204-A9AA-846E8BFCAA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297506CD-9381-4204-A9AA-846E8BFCAA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297506CD-9381-4204-A9AA-846E8BFCAA60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Medicuri.Site" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title>.:Principal:.</title>
+    <link href="Css/Master.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/Default.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ((document.documentElement.clientHeight - 140) > 700) {
+                var altura = (document.documentElement.clientHeight - 140) + 'px';
+                $('.Derecha').css('min-height', altura);
+                $('.Menu').css('min-height', altura);
+                $('.Izquierda').css('min-height', altura);
+                $('#content').css('min-height', altura);
+            }
+            $(window).bind("resize", resizeWindow);
+            function resizeWindow(e) {
+                if ((document.documentElement.clientHeight - 140) > 700) {
+                    var altura = (document.documentElement.clientHeight - 140) + 'px';
+                    $('.Derecha').css('min-height', altura);
+                    $('.Menu').css('min-height', altura);
+                    $('.Izquierda').css('min-height', altura);
+                    $('#content').css('min-height', altura);
+                }
+            }
+        });
+
+        function alertarBitacora() {
+            alert("Recuerde que respaldar su bitacora ayuda a no incrementar el tamaño de la información en exceso y no afectar el rendimiento de la aplicación ");
+        }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+	<form id="form1" runat="server">
+    <div align="center">
+        <div class="Contenedor">
+            <div align="center">
+			    <div id="divCuerpo" class="Cuerpo" runat="server">
+                    <%--Banner/Header--%>
+                    <div class="bg_Logo" align="center">
+                        <div class="Logo">
+                            <div id="header_general">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				                  <!--<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.png" />-->
+                            </asp:ContentPlaceHolder>
+		                    </div>
+                            </div>
+                    </div>
+                    <div id="logout_Contenedor">
+                        <%--LogOut/User--%>
+                        <div id="logout">
+                            <asp:LoginView ID="MasterLoginView" runat="server">
+                                <LoggedInTemplate>
+                                Bienvenid@:  
+                                    <asp:LoginName ID="MasterLoginName" runat="server" />
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                    &nbsp;&nbsp;[&nbsp;<asp:LoginStatus ID="MasterLoginStatus" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx" />&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
+            <div align="center">
+                <div class="Cuerpo" align="left">         
+                    <div class="Izquierda">
+
+                        <%--Menu--%>
+                        <div id="menu" class="Menu">
+                            <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                            </asp:ToolkitScriptManager>
+                            <asp:Accordion ID="AccordionPrincipal" CssClass="accordion" HeaderCssClass="accordionHeader" HeaderSelectedCssClass="accordionHeaderSelected" ContentCssClass="accordionContent" RequireOpenedPane="false" SelectedIndex="-1" runat="server">
+                                <Panes>
+                            
+                                </Panes>
+                            </asp:Accordion>
+                          </div>	
+
+                    </div>
+                    <div class="Derecha">
+
+                        <%--WorkArea--%>
+			                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+			                </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div align="center">
+                    <div class="Cuerpo">
+                        <div class="Pie" align="center">
+                            2011
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+          
+	</form>
+	</div>
+</body>
+</html>

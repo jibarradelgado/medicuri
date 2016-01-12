@@ -1,0 +1,8 @@
+/* CSS Document */
+.botonToolbarRight, .botonToolbar{
+	padding-top: 2px;
+}
+
+.botonToolbarRight:hover, .botonToolbar:hover{
+	padding-top: 4px;
+}

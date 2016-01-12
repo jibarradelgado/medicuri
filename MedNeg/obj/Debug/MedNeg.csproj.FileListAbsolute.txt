@@ -1,0 +1,14 @@
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\MedNeg.dll.config
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\MedNeg.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\MedNeg.pdb
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\MedDAL.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\MedDAL.pdb
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\obj\Debug\MedNeg.Properties.Resources.resources
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\obj\Debug\MedNeg.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\obj\Debug\MedNeg.pdb
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\obj\Debug\MedNeg.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\obj\Debug\MedNeg.csproj.GenerateResource.Cache
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\RegEX.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\XMLFactura.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedNeg\bin\Debug\XMLFactura.pdb

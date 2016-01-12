@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA451F5A-F4CD-4EC6-809D-14D98692AE22}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MedDAL</RootNamespace>
+    <AssemblyName>MedDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Core">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Security">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xml">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlmacenesContactos\DALAlmacenesContactos.cs" />
+    <Compile Include="Almacenes\AlmacenesView.cs" />
+    <Compile Include="Almacenes\DALAlmacenes.cs" />
+    <Compile Include="BitacoraFaltantes\DALBitacoraFaltantes.cs" />
+    <Compile Include="CausesMedicamento\DALCausesMedicamento.cs" />
+    <Compile Include="CausesCie\DALCausesCie.cs" />
+    <Compile Include="Causes\DALCauses.cs" />
+    <Compile Include="ClientesContactos\DALClientesContactos.cs" />
+    <Compile Include="Clientes\ClientesView.cs" />
+    <Compile Include="Clientes\DALClientes.cs" />
+    <Compile Include="ClsModulo.cs" />
+    <Compile Include="Colonias\ColoniasView.cs" />
+    <Compile Include="Facturas\CuentasxCobrarView.cs" />
+    <Compile Include="DataSets\dsColonias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsColonias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsEstados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsMunicipios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMunicipios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsPedidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsPoblaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPoblaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsRecetas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRecetas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsTipos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTipos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnsambleProductos\DALEnsambleProductos.cs" />
+    <Compile Include="Ensambles\DALEnsambles.cs" />
+    <Compile Include="Facturas\DALFacturas.cs" />
+    <Compile Include="Facturas\FacturasxRecetaView.cs" />
+    <Compile Include="Inventarios\InventariosView.cs" />
+    <Compile Include="Inventarios\MovimientosView.cs" />
+    <Compile Include="DAL\medicuriEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>medicuriEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Municipios\MunicipiosView.cs" />
+    <Compile Include="Pedidos\DALPedidos.cs" />
+    <Compile Include="Pedidos\PedidosView.cs" />
+    <Compile Include="Poblaciones\PoblacionesView.cs" />
+    <Compile Include="Productos\DALProductos.cs" />
+    <Compile Include="Bitacora\DALBitacora.cs" />
+    <Compile Include="CamposEditables\DALCamposEditables.cs" />
+    <Compile Include="Colonias\DALColonias.cs" />
+    <Compile Include="Configuracion\DALConfiguracion.cs" />
+    <Compile Include="Estados\DALEstados.cs" />
+    <Compile Include="LineasCredito\DALLineasCredito.cs" />
+    <Compile Include="Municipios\DALMunicipios.cs" />
+    <Compile Include="Perfiles\DALPerfiles.cs" />
+    <Compile Include="PermisosUsuarios\DALPermisosUsuarios.cs" />
+    <Compile Include="Permisos\DALPermisos.cs" />
+    <Compile Include="PermisosPerfiles\DALPermisosPerfiles.cs" />
+    <Compile Include="Poblaciones\DALPoblaciones.cs" />
+    <Compile Include="Productos\ErrorCambioPrecio.cs" />
+    <Compile Include="Productos\ProductoView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresContactos\DALProveedoresContactos.cs" />
+    <Compile Include="ProveedoresProductos\DALProveedoresProductos.cs" />
+    <Compile Include="Proveedores\DALProveedores.cs" />
+    <Compile Include="Proveedores\ProveedoresView.cs" />
+    <Compile Include="RecetasPartidaFaltantes\DALRecetasPartidaFaltantes.cs" />
+    <Compile Include="Recetas\DALRecetas.cs" />
+    <Compile Include="Recetas\RecetasView.cs" />
+    <Compile Include="Remisiones\DALRemisiones.cs" />
+    <Compile Include="Remisiones\RemisionesView.cs" />
+    <Compile Include="TiposIva\DALTiposIva.cs" />
+    <Compile Include="Tipos\DALTipos.cs" />
+    <Compile Include="Usuarios\DALUsuarios.cs" />
+    <Compile Include="Usuarios\UsuarioView.cs" />
+    <Compile Include="VendedorEspecialidad\DALVendedorEspecialidad.cs" />
+    <Compile Include="VendedoresVinculacion\DALVendedoresVinculacion.cs" />
+    <Compile Include="Vendedores\DALVendedores.cs" />
+    <Compile Include="Inventarios\DALInventarios.cs" />
+    <Compile Include="Vendedores\VendedoresView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\dsColonias.xsc">
+      <DependentUpon>dsColonias.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsColonias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsColonias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsColonias.xss">
+      <DependentUpon>dsColonias.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsDataSet.xsc">
+      <DependentUpon>dsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsDataSet.xss">
+      <DependentUpon>dsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsEstados.xsc">
+      <DependentUpon>dsEstados.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsEstados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsEstados.xss">
+      <DependentUpon>dsEstados.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsMunicipios.xsc">
+      <DependentUpon>dsMunicipios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsMunicipios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMunicipios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsMunicipios.xss">
+      <DependentUpon>dsMunicipios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsPedidos.xsc">
+      <DependentUpon>dsPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsPedidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPedidos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsPedidos.xss">
+      <DependentUpon>dsPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsPoblaciones.xsc">
+      <DependentUpon>dsPoblaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsPoblaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPoblaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsPoblaciones.xss">
+      <DependentUpon>dsPoblaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsProveedores.xsc">
+      <DependentUpon>dsProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsProveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProveedores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsProveedores.xss">
+      <DependentUpon>dsProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsRecetas.xsc">
+      <DependentUpon>dsRecetas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsRecetas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRecetas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsRecetas.xss">
+      <DependentUpon>dsRecetas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsTipos.xsc">
+      <DependentUpon>dsTipos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsTipos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTipos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsTipos.xss">
+      <DependentUpon>dsTipos.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="DAL\medicuriEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>medicuriEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\MedDAL.DAL.medicuriEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

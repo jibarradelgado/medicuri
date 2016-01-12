@@ -1,0 +1,6 @@
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedDAL\bin\Debug\MedDAL.dll.config
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedDAL\bin\Debug\MedDAL.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedDAL\bin\Debug\MedDAL.pdb
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedDAL\obj\Debug\MedDAL.dll
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedDAL\obj\Debug\MedDAL.pdb
+C:\Users\Jorge\Bioxor\Web\Medicuri\MedDAL\obj\Debug\MedDAL.csprojResolveAssemblyReference.cache

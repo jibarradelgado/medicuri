@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a20e4b8e-91a1-4927-bc22-ed470d90261e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bioxor.zapto.org:9833/Timbrado.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Timbrado.xsd" MetadataType="Schema" ID="48fedc8e-544f-4026-af8b-dfe029543e11" SourceId="1" SourceUrl="http://bioxor.zapto.org:9833/Timbrado.svc?xsd=xsd1" />
+    <MetadataFile FileName="Timbrado1.xsd" MetadataType="Schema" ID="67acdef6-f55f-4f63-9476-1dbde82123f9" SourceId="1" SourceUrl="http://bioxor.zapto.org:9833/Timbrado.svc?xsd=xsd2" />
+    <MetadataFile FileName="Timbrado2.xsd" MetadataType="Schema" ID="a404ac30-b9a5-44a7-8388-f64f0c8912a6" SourceId="1" SourceUrl="http://bioxor.zapto.org:9833/Timbrado.svc?xsd=xsd3" />
+    <MetadataFile FileName="Timbrado3.xsd" MetadataType="Schema" ID="fde2343b-3335-4b9c-9b25-e9e3e5f7da7f" SourceId="1" SourceUrl="http://bioxor.zapto.org:9833/Timbrado.svc?xsd=xsd0" />
+    <MetadataFile FileName="Timbrado.disco" MetadataType="Disco" ID="edcba9ca-af0d-44ee-bcca-1f401419580f" SourceId="1" SourceUrl="http://bioxor.zapto.org:9833/Timbrado.svc?disco" />
+    <MetadataFile FileName="svcTimbrado.wsdl" MetadataType="Wsdl" ID="5abea4d7-e933-4f57-b9ff-eab7f284a727" SourceId="1" SourceUrl="http://bioxor.zapto.org:9833/Timbrado.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

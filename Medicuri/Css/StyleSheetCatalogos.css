@@ -1,0 +1,178 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #CCCCCC;
+}
+
+.bg_Header{
+	height: 40px;
+	background-image: url('../Images/bg_header.png');
+	background-repeat: repeat-x;
+	padding: 5px;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+	}	
+
+/*ToolBar*/
+.toolbar{
+    height: 54px;
+	background-image: url('../Images/bg_boton_menu.png');
+	background-repeat: repeat-x;
+	padding-left: 5px;
+   }
+ 
+.botonToolbarRight, .botonToolbar{
+	width: 70px;
+	height: 50px;
+	text-align: center;
+	float: left;
+	margin-right: 0px;
+	font-weight: bold;
+	color: #333;
+	cursor: pointer;
+	font-size: 12px;
+    }
+
+.botonToolbarRight:hover, .botonToolbar:hover{
+	background-image: url('../Images/bg_boton.png');
+	font-weight: bold;
+	color: #333;
+	background-repeat: no-repeat;
+}
+
+.botonToolbarRight{
+     float:right;
+     }
+      
+/*SearchTool*/    
+.divBusqueda{
+     height:30px;
+     text-align: right;
+     white-space: nowrap;
+     clear: both; 
+     /*padding-left: 10px;*/
+     /*padding-right: 20px;*/
+     }
+     
+.Busqueda_filtro{
+    width: 550px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    }
+    
+.Busqueda_texto{
+    width: 150px;
+    padding-left: 10px;
+    white-space: nowrap;
+    }
+     
+.Busqueda_boton{
+    width: 145px;
+    text-align: left;
+    white-space: nowrap;
+    }
+     
+.divBusqueda2{
+     height:30px;
+     width:845px;
+     text-align:right;
+     padding-left:5px;
+     }
+     
+#btnBuscar{
+    }
+
+#Label1{
+    margin-left:15px;
+    }
+ 
+ /* Formularios */
+.divFormulario{
+    width: 845px;     
+    margin-left:5px;
+    margin-top:20px; 
+    overflow: scroll !important;
+    }
+          
+.divFormularioSub{
+    width: auto;
+    float: left;
+    text-align: right;
+    margin-left: 10px;
+    margin-top: 2px;    
+    }
+      
+.divSeleccionable{      
+    float: left;
+    width: auto;
+    text-align: right;
+    }
+  
+/* Catalogos */    
+.divCatalogo{
+    width: 845px;
+    margin-left: 0px;
+    text-align: center;
+    }    
+
+.divCatalogoSub{
+    width: auto;
+    }    
+  
+.divCatalogoTabla{
+    margin-left: 300px; 
+    }
+    
+.divCatalogoPanel{
+    
+    overflow: 
+    }
+  
+#divTiempoLocal{
+    display:none;
+    }
+      
+/* Controls forms */
+.labelForms{
+    text-align:right;
+	margin-left: 9px;
+}
+      
+.labelFormsNextTextArea{
+    text-align:right;
+    vertical-align:top;
+    }
+      
+.textBoxForms{
+    margin-top:5px;
+    margin-bottom:10px;
+    }
+   
+.comboBoxForms{
+    margin-top:20px;
+    margin-bottom:10px;      
+    overflow: scroll !important;   
+    }
+    
+.checkBoxForms{
+    text-align:left;
+    margin-top: 5px;
+    margin-bottom:10px;
+    }
+     
+.divReportes
+{
+    margin:5px;
+    overflow:auto;
+    }
+    
+.divFiltro
+{
+    margin-left:60px;     
+    }
+    

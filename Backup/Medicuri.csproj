@@ -1,0 +1,1392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77992F70-E1A0-4610-90FA-39AD75851390}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Medicuri</RootNamespace>
+    <AssemblyName>Medicuri</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <ExcludeApp_Data>false</ExcludeApp_Data>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Documentacion\Medicuri\trunk\Release\Medicuri 07072011\Medicuri 07072011\Medicuri\bin\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\40\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\Documentacion\Medicuri\trunk\Material\SharpZipLib_0860_Bin\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Almacenes.aspx" />
+    <Content Include="Bitacora.aspx" />
+    <Content Include="BusquedasAsincronas.asmx" />
+    <Content Include="CambiarContraseña.aspx" />
+    <Content Include="CamposEditables.aspx" />
+    <Content Include="Causes.aspx" />
+    <Content Include="Clientes.aspx" />
+    <Content Include="Colonias.aspx" />
+    <Content Include="Configuracion.aspx" />
+    <Content Include="Css\chrome.css" />
+    <Content Include="Css\Azul1.css" />
+    <Content Include="Css\Naranja.css" />
+    <Content Include="Css\Morado.css" />
+    <Content Include="Css\Gris.css" />
+    <Content Include="Css\Verde1.css" />
+    <Content Include="Css\Verde.css" />
+    <Content Include="Css\Amarillo.css" />
+    <Content Include="Css\firefox.css" />
+    <Content Include="Css\ie.css" />
+    <Content Include="Css\opera.css" />
+    <Content Include="Css\Rojo.css" />
+    <Content Include="Css\Cafe.css" />
+    <Content Include="Css\Azul.css" />
+    <Content Include="Cuentasxcobrar.aspx" />
+    <Content Include="Ensambles.aspx" />
+    <Content Include="Facturas.aspx" />
+    <Content Include="facturasxreceta.aspx" />
+    <Content Include="FiltroReportes.ascx" />
+    <Content Include="Icons\collapsed.png" />
+    <Content Include="Icons\expanded.png" />
+    <Content Include="Icons\packing16.png" />
+    <Content Include="Icons\packing32.png" />
+    <Content Include="Icons\packing48.png" />
+    <Content Include="Icons\reports16.png" />
+    <Content Include="Icons\reports32.png" />
+    <Content Include="Icons\reports48.png" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\bg_boton.png" />
+    <Content Include="Images\bg_boton_menu.png" />
+    <Content Include="Images\bg_degradado_vertical.png" />
+    <Content Include="Images\bg_general.png" />
+    <Content Include="Images\bg_header.png" />
+    <Content Include="Images\bg_logo.png" />
+    <Content Include="Images\bg_menu_vertical.png" />
+    <Content Include="Images\bg_menu_vertical_boton.png" />
+    <Content Include="Images\bg_menu_vertical_boton_item.png" />
+    <Content Include="Images\bg_menu_vertical_boton_selected.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Inventarios.aspx" />
+    <Content Include="Movimientos.aspx" />
+    <Content Include="Pedidos.aspx" />
+    <Content Include="Recetas.aspx" />
+    <Content Include="RecuperarContraseña.aspx" />
+    <Content Include="LineasDeCredito.aspx" />
+    <Content Include="Municipios.aspx" />
+    <Content Include="Perfiles.aspx" />
+    <Content Include="Poblaciones.aspx" />
+    <Content Include="Productos.aspx" />
+    <Content Include="Proveedores.aspx" />
+    <Content Include="Remisiones.aspx" />
+    <Content Include="Reportes.aspx" />
+    <Content Include="Scripts\browser-css.js" />
+    <Content Include="Scripts\Default.js" />
+    <Content Include="Estados.aspx" />
+    <Content Include="Icons\address_16.png" />
+    <Content Include="Icons\address_32.png" />
+    <Content Include="Icons\address_48.png" />
+    <Content Include="Icons\block_16.png" />
+    <Content Include="Icons\block_32.png" />
+    <Content Include="Icons\block_48.png" />
+    <Content Include="Icons\bookmark_16.png" />
+    <Content Include="Icons\bookmark_32.png" />
+    <Content Include="Icons\bookmark_48.png" />
+    <Content Include="Icons\briefcase_16.png" />
+    <Content Include="Icons\briefcase_32.png" />
+    <Content Include="Icons\briefcase_48.png" />
+    <Content Include="Icons\bubble_16.png" />
+    <Content Include="Icons\bubble_32.png" />
+    <Content Include="Icons\bubble_48.png" />
+    <Content Include="Icons\buy_16.png" />
+    <Content Include="Icons\buy_32.png" />
+    <Content Include="Icons\buy_48.png" />
+    <Content Include="Icons\calendar_16.png" />
+    <Content Include="Icons\calendar_32.png" />
+    <Content Include="Icons\calendar_48.png" />
+    <Content Include="Icons\clipboard_16.png" />
+    <Content Include="Icons\clipboard_32.png" />
+    <Content Include="Icons\clipboard_48.png" />
+    <Content Include="Icons\clock_16.png" />
+    <Content Include="Icons\clock_32.png" />
+    <Content Include="Icons\clock_48.png" />
+    <Content Include="Icons\delete_16.png" />
+    <Content Include="Icons\delete_32.png" />
+    <Content Include="Icons\delete_48.png" />
+    <Content Include="Icons\diagram_16.png" />
+    <Content Include="Icons\diagram_32.png" />
+    <Content Include="Icons\diagram_48.png" />
+    <Content Include="Icons\document_16.png" />
+    <Content Include="Icons\document_32.png" />
+    <Content Include="Icons\document_48.png" />
+    <Content Include="Icons\down_16.png" />
+    <Content Include="Icons\down_32.png" />
+    <Content Include="Icons\down_48.png" />
+    <Content Include="Icons\flag_16.png" />
+    <Content Include="Icons\flag_32.png" />
+    <Content Include="Icons\flag_48.png" />
+    <Content Include="Icons\folder_16.png" />
+    <Content Include="Icons\folder_32.png" />
+    <Content Include="Icons\folder_48.png" />
+    <Content Include="Icons\gear_16.png" />
+    <Content Include="Icons\gear_32.png" />
+    <Content Include="Icons\gear_48.png" />
+    <Content Include="Icons\globe_16.png" />
+    <Content Include="Icons\globe_32.png" />
+    <Content Include="Icons\globe_48.png" />
+    <Content Include="Icons\heart_16.png" />
+    <Content Include="Icons\heart_32.png" />
+    <Content Include="Icons\heart_48.png" />
+    <Content Include="Icons\help_16.png" />
+    <Content Include="Icons\help_32.png" />
+    <Content Include="Icons\help_48.png" />
+    <Content Include="Icons\home_16.png" />
+    <Content Include="Icons\home_32.png" />
+    <Content Include="Icons\home_48.png" />
+    <Content Include="Icons\info_16.png" />
+    <Content Include="Icons\info_32.png" />
+    <Content Include="Icons\info_48.png" />
+    <Content Include="Icons\key_16.png" />
+    <Content Include="Icons\key_32.png" />
+    <Content Include="Icons\key_48.png" />
+    <Content Include="Icons\label_16.png" />
+    <Content Include="Icons\label_32.png" />
+    <Content Include="Icons\label_48.png" />
+    <Content Include="Icons\left_16.png" />
+    <Content Include="Icons\left_32.png" />
+    <Content Include="Icons\left_48.png" />
+    <Content Include="Icons\letter_16.png" />
+    <Content Include="Icons\letter_32.png" />
+    <Content Include="Icons\letter_48.png" />
+    <Content Include="Icons\license.txt" />
+    <Content Include="Icons\monitor_16.png" />
+    <Content Include="Icons\monitor_32.png" />
+    <Content Include="Icons\monitor_48.png" />
+    <Content Include="Icons\pencil_16.png" />
+    <Content Include="Icons\pencil_32.png" />
+    <Content Include="Icons\pencil_48.png" />
+    <Content Include="Icons\plus_16.png" />
+    <Content Include="Icons\plus_32.png" />
+    <Content Include="Icons\plus_48.png" />
+    <Content Include="Icons\present_16.png" />
+    <Content Include="Icons\present_32.png" />
+    <Content Include="Icons\present_48.png" />
+    <Content Include="Icons\print_16.png" />
+    <Content Include="Icons\print_32.png" />
+    <Content Include="Icons\print_48.png" />
+    <Content Include="Icons\right_16.png" />
+    <Content Include="Icons\right_32.png" />
+    <Content Include="Icons\right_48.png" />
+    <Content Include="Icons\save_16.png" />
+    <Content Include="Icons\save_32.png" />
+    <Content Include="Icons\save_48.png" />
+    <Content Include="Icons\search_16.png" />
+    <Content Include="Icons\search_32.png" />
+    <Content Include="Icons\search_48.png" />
+    <Content Include="Icons\shield_16.png" />
+    <Content Include="Icons\shield_32.png" />
+    <Content Include="Icons\shield_48.png" />
+    <Content Include="Icons\statistics_16.png" />
+    <Content Include="Icons\statistics_32.png" />
+    <Content Include="Icons\statistics_48.png" />
+    <Content Include="Icons\stop_16.png" />
+    <Content Include="Icons\stop_32.png" />
+    <Content Include="Icons\stop_48.png" />
+    <Content Include="Icons\tick_16.png" />
+    <Content Include="Icons\tick_32.png" />
+    <Content Include="Icons\tick_48.png" />
+    <Content Include="Icons\trash_16.png" />
+    <Content Include="Icons\trash_32.png" />
+    <Content Include="Icons\trash_48.png" />
+    <Content Include="Icons\up_16.png" />
+    <Content Include="Icons\up_32.png" />
+    <Content Include="Icons\up_48.png" />
+    <Content Include="Icons\user_16.png" />
+    <Content Include="Icons\user_32.png" />
+    <Content Include="Icons\user_48.png" />
+    <Content Include="Icons\wallet_16.png" />
+    <Content Include="Icons\wallet_32.png" />
+    <Content Include="Icons\wallet_48.png" />
+    <Content Include="Icons\warning_16.png" />
+    <Content Include="Icons\warning_32.png" />
+    <Content Include="Icons\warning_48.png" />
+    <Content Include="Images\black.png" />
+    <Content Include="Images\Imagen2.png" />
+    <Content Include="Images\Imagen4.png" />
+    <Content Include="Images\Imagen5.png" />
+    <Content Include="Images\images.jpg" />
+    <Content Include="Images\Medicuri.jpg" />
+    <Content Include="Images\Medicuri.png" />
+    <Content Include="Images\Medicuri7.png" />
+    <Content Include="Images\white.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Css\Master.css" />
+    <Content Include="Css\StyleSheetCatalogos.css" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Tipos.aspx" />
+    <Content Include="TiposDeImpuesto.aspx" />
+    <Content Include="Vendedores.aspx" />
+    <Content Include="VistaReporte.aspx" />
+    <Content Include="VistaReporteGenerico.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="Principal.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="Usuarios.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Almacenes.aspx.cs">
+      <DependentUpon>Almacenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacenes.aspx.designer.cs">
+      <DependentUpon>Almacenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora.aspx.cs">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bitacora.aspx.designer.cs">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedasAsincronas.asmx.cs">
+      <DependentUpon>BusquedasAsincronas.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CambiarContraseña.aspx.cs">
+      <DependentUpon>CambiarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambiarContraseña.aspx.designer.cs">
+      <DependentUpon>CambiarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CamposEditables.aspx.cs">
+      <DependentUpon>CamposEditables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CamposEditables.aspx.designer.cs">
+      <DependentUpon>CamposEditables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Causes.aspx.cs">
+      <DependentUpon>Causes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Causes.aspx.designer.cs">
+      <DependentUpon>Causes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colonias.aspx.cs">
+      <DependentUpon>Colonias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colonias.aspx.designer.cs">
+      <DependentUpon>Colonias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion.aspx.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuracion.aspx.designer.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentasxcobrar.aspx.cs">
+      <DependentUpon>Cuentasxcobrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuentasxcobrar.aspx.designer.cs">
+      <DependentUpon>Cuentasxcobrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dsFacturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRecetas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRecetas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ensambles.aspx.cs">
+      <DependentUpon>Ensambles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ensambles.aspx.designer.cs">
+      <DependentUpon>Ensambles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estados.aspx.cs">
+      <DependentUpon>Estados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estados.aspx.designer.cs">
+      <DependentUpon>Estados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturas.aspx.cs">
+      <DependentUpon>Facturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturas.aspx.designer.cs">
+      <DependentUpon>Facturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="facturasxreceta.aspx.cs">
+      <DependentUpon>facturasxreceta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="facturasxreceta.aspx.designer.cs">
+      <DependentUpon>facturasxreceta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroReportes.ascx.cs">
+      <DependentUpon>FiltroReportes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FiltroReportes.ascx.designer.cs">
+      <DependentUpon>FiltroReportes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazBitacora.Master.cs">
+      <DependentUpon>InterfazBitacora.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfazBitacora.Master.designer.cs">
+      <DependentUpon>InterfazBitacora.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios.aspx.cs">
+      <DependentUpon>Inventarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventarios.aspx.designer.cs">
+      <DependentUpon>Inventarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos.aspx.cs">
+      <DependentUpon>Movimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movimientos.aspx.designer.cs">
+      <DependentUpon>Movimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos.aspx.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos.aspx.designer.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recetas.aspx.cs">
+      <DependentUpon>Recetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recetas.aspx.designer.cs">
+      <DependentUpon>Recetas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarContraseña.aspx.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContraseña.aspx.designer.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LineasDeCredito.aspx.cs">
+      <DependentUpon>LineasDeCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LineasDeCredito.aspx.designer.cs">
+      <DependentUpon>LineasDeCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Municipios.aspx.cs">
+      <DependentUpon>Municipios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Municipios.aspx.designer.cs">
+      <DependentUpon>Municipios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfiles.aspx.cs">
+      <DependentUpon>Perfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfiles.aspx.designer.cs">
+      <DependentUpon>Perfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Poblaciones.aspx.cs">
+      <DependentUpon>Poblaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Poblaciones.aspx.designer.cs">
+      <DependentUpon>Poblaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Remisiones.aspx.cs">
+      <DependentUpon>Remisiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Remisiones.aspx.designer.cs">
+      <DependentUpon>Remisiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.aspx.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes.aspx.designer.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rptReportes\Almacenes\rptDistribucionExistenciasNombre.cs">
+      <DependentUpon>rptDistribucionExistenciasNombre.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Almacenes\rptDistribucionExistenciasClave.cs">
+      <DependentUpon>rptDistribucionExistenciasClave.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Almacenes\rptAlmacenes.cs">
+      <DependentUpon>rptAlmacenes.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Almacenes\rptDistribucionExistencias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDistribucionExistencias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Clientes\rptPorConcepto.cs">
+      <DependentUpon>rptPorConcepto.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Clientes\rptClientes.cs">
+      <DependentUpon>rptClientes.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Clientes\rptEstadoCuentaGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEstadoCuentaGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptInventariosLotes.cs">
+      <DependentUpon>rptInventariosLotes.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Facturacion\rptAntiguedadDeSaldos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAntiguedadDeSaldos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Facturacion\rptCuentasPorCobrar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCuentasPorCobrar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Facturacion\rptDetalladoDeFacturas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDetalladoDeFacturas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Facturacion\rptPendientesPorSurtir.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPendientesPorSurtir.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Facturacion\rptResumenGeneralDeFacturas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptResumenGeneralDeFacturas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Inventarios\rptHistorialExistencias.cs">
+      <DependentUpon>rptHistorialExistencias.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Inventarios\rptPedimentosAduanalesLotes.cs">
+      <DependentUpon>rptPedimentosAduanalesLotes.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Inventarios\rptNumerosSerie.cs">
+      <DependentUpon>rptNumerosSerie.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Inventarios\rptVentasCliente.cs">
+      <DependentUpon>rptVentasCliente.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Inventarios\rptVentasPeriodo.cs">
+      <DependentUpon>rptVentasPeriodo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Inventarios\rptProductosCaducos.cs">
+      <DependentUpon>rptProductosCaducos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Inventarios\rptComprasProveedor.cs">
+      <DependentUpon>rptComprasProveedor.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\LineasCredito\rptAcumuladoLineaCredito.cs">
+      <DependentUpon>rptAcumuladoLineaCredito.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Movimientos\rptMovimientos.cs">
+      <DependentUpon>rptMovimientos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptProductosLista.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProductosLista.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptStockMaximo.cs">
+      <DependentUpon>rptStockMaximo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptStockMinimoAlmacen.cs">
+      <DependentUpon>rptStockMinimoAlmacen.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptProductosUltimaReceta.cs">
+      <DependentUpon>rptProductosUltimaReceta.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptProductosUltimaRemision.cs">
+      <DependentUpon>rptProductosUltimaRemision.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptProductosUltimaFactura.cs">
+      <DependentUpon>rptProductosUltimaFactura.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptStockMinimo.cs">
+      <DependentUpon>rptStockMinimo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptListaPrecios.cs">
+      <DependentUpon>rptListaPrecios.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Productos\rptProductos.cs">
+      <DependentUpon>rptProductos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\Proveedores\rptProveedores.cs">
+      <DependentUpon>rptProveedores.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\rptEnsambles.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEnsambles.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptFacturas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptFacturasPorRecetas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturasPorRecetas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptLineasCredito.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLineasCredito.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecetas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetasConsumo.cs">
+      <DependentUpon>rptRecetasConsumo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetasDiagnostico.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecetasDiagnostico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetasLineaCredito.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecetasLineaCredito.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetasRequisicion.cs">
+      <DependentUpon>rptRecetasRequisicion.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetasPaciente.cs">
+      <DependentUpon>rptRecetasPaciente.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptReportes\rptAlmacenes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAlmacenes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptCaducos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCaducos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptCamposEditables.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCamposEditables.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptColonias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptColonias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptConsumosMedicamento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptConsumosMedicamento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptConsumosMedicamentoFarmacia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptConsumosMedicamentoFarmacia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptConsumosMedicamentoRequisicion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptConsumosMedicamentoRequisicion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptEstados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEstados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptInventarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInventarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptMedicamentosMasRecetados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMedicamentosMasRecetados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptMedicamentosMayorMovimiento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMedicamentosMayorMovimiento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptMedicamentosPrescritosMedico.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMedicamentosPrescritosMedico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptMunicipios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMunicipios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptPedidos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPedidos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptPerfil.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPerfil.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptPoblaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPoblaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptProveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetasOld.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecetasOld.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptRecetasLocalidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecetasLocalidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptRemisiones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRemisiones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptTipos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTipos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptTiposIva.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTiposIva.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptUsuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUsuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\rptVendedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVendedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportes\Vendedores\rptVendedores.cs">
+      <DependentUpon>rptVendedores.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazCatalogo.Master.cs">
+      <DependentUpon>InterfazCatalogo.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfazCatalogo.Master.designer.cs">
+      <DependentUpon>InterfazCatalogo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tipos.aspx.cs">
+      <DependentUpon>Tipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tipos.aspx.designer.cs">
+      <DependentUpon>Tipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TiposDeImpuesto.aspx.cs">
+      <DependentUpon>TiposDeImpuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TiposDeImpuesto.aspx.designer.cs">
+      <DependentUpon>TiposDeImpuesto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedores.aspx.cs">
+      <DependentUpon>Vendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedores.aspx.designer.cs">
+      <DependentUpon>Vendedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VistaReporte.aspx.cs">
+      <DependentUpon>VistaReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VistaReporte.aspx.designer.cs">
+      <DependentUpon>VistaReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VistaReporteGenerico.aspx.cs">
+      <DependentUpon>VistaReporteGenerico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VistaReporteGenerico.aspx.designer.cs">
+      <DependentUpon>VistaReporteGenerico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Archivos\Facturacion\" />
+    <Folder Include="Archivos\FacturasElectronicas\" />
+    <Folder Include="Archivos\Logo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InterfazCatalogo.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InterfazBitacora.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MedDAL\MedDAL.csproj">
+      <Project>{EA451F5A-F4CD-4EC6-809D-14D98692AE22}</Project>
+      <Name>MedDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MedNeg\MedNeg.csproj">
+      <Project>{7157CDC1-0D43-4401-8088-3BB9B87DACD9}</Project>
+      <Name>MedNeg</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dsFacturas.xsc">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="dsFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFacturas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsFacturas.xss">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="dsRecetas.xsc">
+      <DependentUpon>dsRecetas.xsd</DependentUpon>
+    </None>
+    <None Include="dsRecetas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRecetas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsRecetas.xss">
+      <DependentUpon>dsRecetas.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rptReportes\Almacenes\rptDistribucionExistenciasNombre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistribucionExistenciasNombre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Almacenes\rptDistribucionExistenciasClave.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistribucionExistenciasClave.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Almacenes\rptAlmacenes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAlmacenes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Almacenes\rptDistribucionExistencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistribucionExistencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Clientes\rptPorConcepto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPorConcepto.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Clientes\rptClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Clientes\rptEstadoCuentaGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEstadoCuentaGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptInventariosLotes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInventariosLotes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Facturacion\rptAntiguedadDeSaldos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAntiguedadDeSaldos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Facturacion\rptCuentasPorCobrar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCuentasPorCobrar.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Facturacion\rptDetalladoDeFacturas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDetalladoDeFacturas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Facturacion\rptPendientesPorSurtir.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPendientesPorSurtir.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Facturacion\rptResumenGeneralDeFacturas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptResumenGeneralDeFacturas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Inventarios\rptHistorialExistencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHistorialExistencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Inventarios\rptPedimentosAduanalesLotes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPedimentosAduanalesLotes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Inventarios\rptNumerosSerie.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNumerosSerie.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Inventarios\rptVentasCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Inventarios\rptVentasPeriodo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasPeriodo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Inventarios\rptProductosCaducos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductosCaducos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Inventarios\rptComprasProveedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptComprasProveedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\LineasCredito\rptAcumuladoLineaCredito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAcumuladoLineaCredito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Movimientos\rptMovimientos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMovimientos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptProductosLista.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductosLista.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptStockMaximo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStockMaximo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptStockMinimoAlmacen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStockMinimoAlmacen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptProductosUltimaReceta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductosUltimaReceta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptProductosUltimaRemision.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductosUltimaRemision.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptProductosUltimaFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductosUltimaFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptStockMinimo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStockMinimo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptListaPrecios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListaPrecios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Productos\rptProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Proveedores\rptProveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptEnsambles.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEnsambles.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptFacturas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptFacturasPorRecetas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturasPorRecetas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptLineasCredito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLineasCredito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetasConsumo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasConsumo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetasDiagnostico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasDiagnostico.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetasLineaCredito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasLineaCredito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetasRequisicion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasRequisicion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetasPaciente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasPaciente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptAlmacenes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAlmacenes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptCaducos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCaducos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptCamposEditables.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCamposEditables.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptColonias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptColonias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptConsumosMedicamento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptConsumosMedicamento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptConsumosMedicamentoFarmacia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptConsumosMedicamentoFarmacia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptConsumosMedicamentoRequisicion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptConsumosMedicamentoRequisicion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptEstados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEstados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptInventarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInventarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptMedicamentosMasRecetados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMedicamentosMasRecetados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptMedicamentosMayorMovimiento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMedicamentosMayorMovimiento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptMedicamentosPrescritosMedico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMedicamentosPrescritosMedico.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptMunicipios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMunicipios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptPedidos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPedidos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptPerfil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPerfil.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptPoblaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPoblaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptProveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetasOld.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasOld.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRecetasLocalidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasLocalidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptRemisiones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRemisiones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptTipos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTipos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptTiposIva.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTiposIva.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptUsuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUsuarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\rptVendedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVendedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportes\Vendedores\rptVendedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVendedores.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29403</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

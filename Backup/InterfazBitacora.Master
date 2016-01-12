@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="InterfazBitacora.master.cs" Inherits="Medicuri.InterfazBitacora" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Css/StyleSheetCatalogos.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    function alertarSesion() {
+        alert("Tiempo de sesión expirado. Haga logout y vuelva a registrarse");
+    }
+    </script>    
+    <title></title>
+    <asp:ContentPlaceHolder ID="contentPlaceHolderHeader" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="Color" style="background-image: url('../Images/bg.png');">
+    <form id="form1" runat="server"> <div id="hola" >
+    <div class="bg_Header">
+        <asp:Label ID="lblInfo" runat="server" Text="Usted esta viendo: Bitácora" Font-Bold="True"></asp:Label>
+        <asp:Label ID="lblNombreModulo" runat="server" Text="" Font-Bold="True"></asp:Label>
+    </div>
+    <div id="ToolBar" class="toolbar">
+        
+        <div id="btnRespaldar" class="botonToolbar">
+        <asp:ImageButton ID="ImgBtnRespaldar" runat="server"
+                ImageAlign="TextTop" ImageUrl="~/Icons/save_32.png" />
+            <asp:Label ID="Label2" runat="server" Text="Respaldar" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnReportes" class="botonToolbar">
+        <asp:ImageButton ID="ImgBtnReportes" runat="server"
+                ImageAlign="TextTop" ImageUrl="~/Icons/statistics_32.png" />
+            <asp:Label ID="Label8" runat="server" Text="Reportes" Font-Size="Small"></asp:Label>
+        </div>     
+          <div id="btnMostrar" class="botonToolbar" runat="server">
+        <asp:ImageButton ID="imgBtnMostrar" runat="server" 
+                ImageAlign="TextTop" ImageUrl="~/Icons/clipboard_32.png" />
+            <asp:Label ID="lblMostrar" runat="server" Text="Mostrar" Font-Size="Small"></asp:Label>
+        </div>   
+    </div>
+    
+    <div id="Busqueda" class="divBusqueda2">
+        <asp:CheckBox ID="ckbFiltro1" runat="server" Text="Filtro4" />&nbsp;
+        <asp:TextBox ID="txbFechaInicio" runat="server" Width="100px"></asp:TextBox>
+        <asp:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="txbFechaInicio">
+        </asp:CalendarExtender>&nbsp;&nbsp;
+        <asp:TextBox ID="txbFechaFin" runat="server" Width="100px"></asp:TextBox>
+        <asp:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txbFechaFin">
+        </asp:CalendarExtender>
+        <asp:RadioButton id="rdbFiltro1" runat="server"  GroupName="Filtro" 
+            Text="Filtro1" CausesValidation="True" ValidationGroup="Filtro"></asp:RadioButton>&nbsp;
+        <asp:RadioButton id="rdbFiltro2" runat="server"  GroupName="Filtro" 
+            Text="Filtro2" CausesValidation="True" ValidationGroup="Filtro"></asp:RadioButton>&nbsp;
+        <asp:RadioButton id="rdbFiltro3" runat="server"  GroupName="Filtro" 
+            Text="Filtro3" CausesValidation="True" ValidationGroup="Filtro"></asp:RadioButton>
+        &nbsp;
+        <asp:Label ID="Label1" runat="server" Text="Buscar:"></asp:Label>&nbsp;
+        <asp:TextBox ID="txbBuscar" runat="server" Width="100px"></asp:TextBox>
+        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />&nbsp;&nbsp;   
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="contentPlaceHolderBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div></div>
+    </form>
+</body>
+</html>

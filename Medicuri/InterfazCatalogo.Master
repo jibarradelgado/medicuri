@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="InterfazCatalogo.Master.cs" Inherits="Medicuri.Site1" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Css/StyleSheetCatalogos.css" rel="stylesheet" type="text/css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="contentPlaceHolderHeader" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/browser-css.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function alertarSesion() {
+            alert("Tiempo de sesión expirado. Haga logout y vuelva a registrarse");
+        }
+        function alertarStock(iAlertar) {
+            switch (iAlertar) {
+                case 0: alert("Los productos se encuentran dentro del stock establecido");
+                    break;
+                case 1: alert("Uno o varios productos se encuentran en stock bajo");
+                    break;
+                case 2: alert("El producto que desea agregar se encuentra con stock insuficiente");
+                    break;
+                case 3: alert("Uno o varios productos se encuentran sin stock de productos");
+            }            
+        }
+        function alertarCaducidad(iAlertar) {
+            switch (iAlertar) {
+                case 0: alert("No existen productos caducos");
+                    break;
+                case 1: alert("Uno o varios productos han caducado, realice un reporte de caducidad");
+                    break;
+                case 2: alert("El producto que desea agregar esta a punto de caducar");
+                    break;
+                case 3: alert("El producto que desea agregar ha caducado");
+            }
+        }
+        function alertarFacturas(iAlertar) {
+            switch (iAlertar) {
+                case 0: alert("Factura emitida y timbrada exitosamente");
+                    break;
+                case 1: alert("La Factura fue emitida pero hubo un problema de comunicación con el PAC para timbrarla");
+                    break;
+                case 2: alert("La Factura no fue emitida, ya que no paso la validación de certificación");
+                    break;
+                case 3: alert("Ocurrio una excepción de tipo SOAPHeaderException");
+                    break;
+                case 4: alert("Ocurrió una excepción desconocida");
+                    break;
+                case 5: alert("La factura no fue emitida electrónicamente o no se encuentra en el servidor");
+                    break;
+                case 6: alert("Por el momento no es posible emitir ni timbrar facturas");
+                    break;
+            }
+        }
+        function alertarCancelacionFacturas(iAlertar) {
+            switch (iAlertar) {
+                case 0: alert("Cancelación exitosa");
+                    break;
+                case 1: alert("La Cancelación no pudo ser realizada");
+                    break;
+            }
+        }
+        function alertarExcepcion(iAlertar) {
+            switch (iAlertar) {
+                case 0: alert("Ha ocurrido una excepción");
+                    break;
+            }
+        }
+        function alertar(sAlertar) {
+            alert(sAlertar);
+        }
+    </script>
+    <style type="text/css">
+        .ajax__combobox_buttoncontainer BUTTON
+        {
+            width: 20px !important;
+            height: 21px !important;
+        }
+        .ajax__combobox_itemlist 
+         {
+          display: list-item !important;
+          width: auto !important;                         
+         }
+    </style>
+</head>
+<body class="Color" style="background-image: url('../Images/bg.png');">
+    <form id="form1" runat="server"> <div id="hola" >
+    <div class="bg_Header">
+        <asp:Label ID="lblInfo" runat="server" Text="Usted esta viendo: " Font-Bold="True"></asp:Label>
+        <asp:Label ID="lblNombreModulo" runat="server" Text="" Font-Bold="True"></asp:Label>
+    </div>
+    <div id="ToolBar" class="toolbar">
+        
+        <div id="btnNuevo" class="botonToolbar" runat="server">
+            <asp:ImageButton ID="imgBtnNuevo" runat="server"
+                ImageAlign="TextTop" ImageUrl="~/Icons/document_32.png" />
+            <asp:Label ID="lblNuevo" runat="server" Text="Nuevo" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnEditar" class="botonToolbar" runat="server">
+            <asp:ImageButton ID="imgBtnEditar" runat="server"
+                ImageAlign="TextTop" ImageUrl="~/Icons/pencil_32.png" />
+            <asp:Label ID="lblEditar" runat="server" Text="Editar" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnEliminar" class="botonToolbar" runat="server">
+            <asp:ImageButton ID="imgBtnEliminar" runat="server" OnClientClick="return confirm('¿Está usted seguro de que desea eliminar el registro?');"
+                ImageAlign="TextTop" ImageUrl="~/Icons/delete_32.png" />
+                
+            <asp:Label ID="lblEliminar" runat="server" Text="Eliminar" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnReportes" class="botonToolbar" runat="server">
+            <asp:ImageButton ID="imgBtnReportes" runat="server"
+                ImageAlign="TextTop" ImageUrl="~/Icons/statistics_32.png" />
+            <asp:Label ID="lblReportes" runat="server" Text="Reportes" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnPrecios" class="botonToolbar" runat="server" visible="false">
+            <asp:ImageButton ID="imgBtnPrecios" runat="server"
+                ImageAlign="TextTop" ImageUrl="~/Icons/label_32.png" />
+            <asp:Label ID="lblPrecios" runat="server" Text="Precios" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnMostrar" class="botonToolbar" runat="server">
+            <asp:ImageButton ID="imgBtnMostrar" runat="server" 
+                ImageAlign="TextTop" ImageUrl="~/Icons/clipboard_32.png" />
+            <asp:Label ID="lblMostrar" runat="server" Text="Mostrar" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnImprimir" class="botonToolbar" runat="server">
+            <asp:ImageButton ID="imgBtnImprimir" runat="server" 
+                ImageAlign="TextTop" ImageUrl="~/Icons/reports32.png" />
+            <asp:Label ID="lblImprimir" runat="server" Text="Imprimir" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnAlertaStock" class="botonToolbar" visible="false" runat="server">
+            <asp:ImageButton ID="imgBtnAlertas" runat="server" 
+                ImageAlign="TextTop" ImageUrl="~/Icons/warning_32.png" />
+            <asp:Label ID="lblAlertas" runat="server" Text="Alertas" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div>
+        <div id="btnCancelar" class="botonToolbarRight" runat="server">
+            <asp:ImageButton ID="imgBtnCancelar" runat="server" OnClientClick="return confirm('¿Está usted seguro de que desea cancelar?');"
+                ImageAlign="TextTop" ImageUrl="~/Icons/block_32.png" />
+            <asp:Label ID="lblCancelar" runat="server" Text="Cancelar" Font-Size="Small"></asp:Label>
+        </div>
+
+        <div id="btnAceptar" class="botonToolbarRight" runat="server">
+            <asp:ImageButton ID="imgBtnAceptar" runat="server" 
+                ImageAlign="TextTop" ImageUrl="~/Icons/save_32.png" />
+            <asp:Label ID="lblGuardar" runat="server" Text="Guardar" Font-Size="Small"></asp:Label>
+        </div>
+        </div>
+        
+    </div>
+    <div id="Busqueda" class="divBusqueda">
+        <table>
+            <tr>
+                <td class="Busqueda_filtro" width="550px" align="right">
+                    <asp:RadioButton id="rdbFiltro1" runat="server"  GroupName="Filtro" Text="Filtro1"></asp:RadioButton>
+                    <asp:RadioButton id="rdbFiltro2" runat="server"  GroupName="Filtro" Text="Filtro2"></asp:RadioButton>
+                    <asp:RadioButton id="rdbFiltro3" runat="server"  GroupName="Filtro" Text="Filtro3"></asp:RadioButton>
+                    <asp:RadioButton ID="rdbFiltro4" runat="server"  GroupName="Filtro" Text="Filtro4" Visible="False" />
+                </td>
+                <td class="Busqueda_texto" width="150px" align="right">
+                    <asp:Label ID="lblBuscar" runat="server" Text="Buscar:"></asp:Label>
+                    <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox>
+                </td>
+                <td class="Busqueda_boton" width="145px" align="left">    
+                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="contentPlaceHolderBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div></div>
+    </form>
+</body>
+</html>

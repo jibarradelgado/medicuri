@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DALConfiguracion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <sRazonSocial>Medicuri SA de CV</sRazonSocial>
+  <sRfc>MEDI801107U67</sRfc>
+  <sRegimenFiscal>PERSONAS MORALES DEL RÉGIMEN GENERAL</sRegimenFiscal>
+  <sDomicilio>Ave Las Palmas</sDomicilio>
+  <sMunicipio>Colima</sMunicipio>
+  <sEstado>Colima</sEstado>
+  <sPais>Mexico</sPais>
+  <sCodigoPostal>44860</sCodigoPostal>
+  <sRutaCertificado>aaa010101aaa__csd_01.cer</sRutaCertificado>
+  <sRutaLlave>aaa010101aaa__csd_01.key</sRutaLlave>
+  <sRutaFirma />
+  <sContraseña>12345678a</sContraseña>
+  <sServidorBD>127.0.0.1</sServidorBD>
+  <sUsuarioBD>sa</sUsuarioBD>
+  <sContraseñaBD>12345678a</sContraseñaBD>
+  <sColorInterfaz>Cafe</sColorInterfaz>
+  <sRutaBaner>logo.png</sRutaBaner>
+  <iFolioPedidos>0</iFolioPedidos>
+  <iPedidosAutomatico>1</iPedidosAutomatico>
+  <iFolioRecetas>2</iFolioRecetas>
+  <iRecetasAutomatico>1</iRecetasAutomatico>
+  <iFolioRemisiones>0</iFolioRemisiones>
+  <iRemisionesAutomatico>1</iRemisionesAutomatico>
+  <iFolioFacturas>28</iFolioFacturas>
+  <iFacturasAutomatico>1</iFacturasAutomatico>
+  <iVentasNegativas>0</iVentasNegativas>
+  <iNoMaxRenglonesFactura>20</iNoMaxRenglonesFactura>
+  <sServidorSmtp>127.0.0.1</sServidorSmtp>
+  <sPuertoSmtp>25</sPuertoSmtp>
+  <sCorreoEmisor>no-reply@bioxor.com</sCorreoEmisor>
+  <sContraseñaSmtp>123456</sContraseñaSmtp>
+  <iCaducidad>0</iCaducidad>
+</DALConfiguracion>

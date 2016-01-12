@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7157CDC1-0D43-4401-8088-3BB9B87DACD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MedNeg</RootNamespace>
+    <AssemblyName>MedNeg</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Documentacion\Medicuri\trunk\Release\Medicuri 07072011\Medicuri 07072011\Medicuri\bin\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\Documentacion\Medicuri\trunk\Material\Librerias Medicuri\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="RegEX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documentacion\Medicuri\trunk\Material\Librerias24102011\RegEX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlmacenesContactos\BlAlmacenesContactos.cs" />
+    <Compile Include="Almacenes\BlAlmacenes.cs" />
+    <Compile Include="BitacoraFaltantes\BlBitacoraFaltantes.cs" />
+    <Compile Include="Bitacora\BlBitacora.cs" />
+    <Compile Include="Causes\BlCauses.cs" />
+    <Compile Include="Causes\BLCausesMedicamentos.cs" />
+    <Compile Include="ClientesContactos\BlClientesContactos.cs" />
+    <Compile Include="Clientes\BlClientes.cs" />
+    <Compile Include="Ensambles\BlEnsambles.cs" />
+    <Compile Include="Ensambles\EnsambleProductos.cs" />
+    <Compile Include="Inventarios\Producto.cs" />
+    <Compile Include="Pedidos\BlPedidos.cs" />
+    <Compile Include="CamposEditables\BlCamposEditables.cs" />
+    <Compile Include="Colonias\BlColonias.cs" />
+    <Compile Include="Configuracion\BlConfiguracion.cs" />
+    <Compile Include="Estados\BlEstados.cs" />
+    <Compile Include="Facturas\BlFacturas.cs" />
+    <Compile Include="Inventarios\BlInventarios.cs" />
+    <Compile Include="LineasCredito\BlLineasCredito.cs" />
+    <Compile Include="LogIn\BlLogin.cs" />
+    <Compile Include="Municipios\BlMunicipios.cs" />
+    <Compile Include="Perfiles\BlPerfiles.cs" />
+    <Compile Include="PermisosUsuarios\BlPermisosUsuarios.cs" />
+    <Compile Include="PermisosPerfiles\BlPermisosPerfiles.cs" />
+    <Compile Include="Permisos\BlPermisos.cs" />
+    <Compile Include="Poblaciones\BlPoblaciones.cs" />
+    <Compile Include="Productos\BlProductos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresContactos\BlProveedoresContactos.cs" />
+    <Compile Include="Proveedores\BlProveedores.cs" />
+    <Compile Include="RecetasPartidaFaltantes\BlRecetasPartidaFaltantes.cs" />
+    <Compile Include="Recetas\BlRecetas.cs" />
+    <Compile Include="Recetas\Producto.cs" />
+    <Compile Include="RecuperarContraseña\BlRecuperarContraseña.cs" />
+    <Compile Include="RegEx\BlRegEx.cs" />
+    <Compile Include="Remisiones\BlRemisiones.cs" />
+    <Compile Include="Reportes\rptRecetas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecetas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptRecetasLocalidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecetasLocalidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Serializacion\BlXmlSerializacion.cs" />
+    <Compile Include="Service References\FacturaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TiposIva\BlTiposIva.cs" />
+    <Compile Include="Tipos\BlTipos.cs" />
+    <Compile Include="Usuarios\BlUsuarios.cs" />
+    <Compile Include="Utilidades\DataSetLinqOperators.cs" />
+    <Compile Include="VendedorEspecialidad\BlVendedorEspecialidad.cs" />
+    <Compile Include="Vendedores\BlVendedores.cs" />
+    <Compile Include="VendedorVinculacion\BlVendedorVinculacion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Escritorio\FacturaDesktop\XMLFactura\XMLFactura\XMLFactura.csproj">
+      <Project>{297506CD-9381-4204-A9AA-846E8BFCAA60}</Project>
+      <Name>XMLFactura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MedDAL\MedDAL.csproj">
+      <Project>{EA451F5A-F4CD-4EC6-809D-14D98692AE22}</Project>
+      <Name>MedDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FacturaService\MedNeg.FacturaService.RespuestaCFDi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FacturaService\svcTimbrado.wsdl" />
+    <None Include="Service References\FacturaService\Timbrado.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FacturaService\Timbrado1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FacturaService\Timbrado2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FacturaService\Timbrado3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptRecetas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptRecetasLocalidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecetasLocalidad.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FacturaService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FacturaService\Timbrado.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FacturaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FacturaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FacturaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="medicuriModelStoreContainer" CdmEntityContainer="medicuriEntities">
+    <EntitySetMapping Name="almacenes">
+      <EntityTypeMapping TypeName="medicuriModel.almacenes">
+        <MappingFragment StoreEntitySet="almacenes">
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="idTipoAlmacen" ColumnName="idTipoAlmacen" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumeroExt" ColumnName="NumeroExt" />
+          <ScalarProperty Name="NumeroInt" ColumnName="NumeroInt" />
+          <ScalarProperty Name="idColonia" ColumnName="idColonia" />
+          <ScalarProperty Name="idMunicipio" ColumnName="idMunicipio" />
+          <ScalarProperty Name="idPoblacion" ColumnName="idPoblacion" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Campo1" ColumnName="Campo1" />
+          <ScalarProperty Name="Campo2" ColumnName="Campo2" />
+          <ScalarProperty Name="Campo3" ColumnName="Campo3" />
+          <ScalarProperty Name="Campo4" ColumnName="Campo4" />
+          <ScalarProperty Name="Campo5" ColumnName="Campo5" />
+          <ScalarProperty Name="Campo6" ColumnName="Campo6" />
+          <ScalarProperty Name="Campo7" ColumnName="Campo7" />
+          <ScalarProperty Name="Campo8" ColumnName="Campo8" />
+          <ScalarProperty Name="Campo9" ColumnName="Campo9" />
+          <ScalarProperty Name="Campo10" ColumnName="Campo10" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="almacenes_contactos">
+      <EntityTypeMapping TypeName="medicuriModel.almacenes_contactos">
+        <MappingFragment StoreEntitySet="almacenes_contactos">
+          <ScalarProperty Name="idContacto" ColumnName="idContacto" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bitacora">
+      <EntityTypeMapping TypeName="medicuriModel.bitacora">
+        <MappingFragment StoreEntitySet="bitacora">
+          <ScalarProperty Name="IdEntradaBitacora" ColumnName="IdEntradaBitacora" />
+          <ScalarProperty Name="FechaEntradaSrv" ColumnName="FechaEntradaSrv" />
+          <ScalarProperty Name="FechaEntradaCte" ColumnName="FechaEntradaCte" />
+          <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bitacora_faltantes">
+      <EntityTypeMapping TypeName="medicuriModel.bitacora_faltantes">
+        <MappingFragment StoreEntitySet="bitacora_faltantes">
+          <ScalarProperty Name="idBitacoraFaltantes" ColumnName="idBitacoraFaltantes" />
+          <ScalarProperty Name="idReceta" ColumnName="idReceta" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="campos_editables">
+      <EntityTypeMapping TypeName="medicuriModel.campos_editables">
+        <MappingFragment StoreEntitySet="campos_editables">
+          <ScalarProperty Name="idCampoEditable" ColumnName="idCampoEditable" />
+          <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+          <ScalarProperty Name="Campo" ColumnName="Campo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="causes">
+      <EntityTypeMapping TypeName="medicuriModel.causes">
+        <MappingFragment StoreEntitySet="causes">
+          <ScalarProperty Name="idCause" ColumnName="idCause" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Conglomerado" ColumnName="Conglomerado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="causes_cie">
+      <EntityTypeMapping TypeName="medicuriModel.causes_cie">
+        <MappingFragment StoreEntitySet="causes_cie">
+          <ScalarProperty Name="idCauseCie" ColumnName="idCauseCie" />
+          <ScalarProperty Name="idCause" ColumnName="idCause" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="causes_medicamentos">
+      <EntityTypeMapping TypeName="medicuriModel.causes_medicamentos">
+        <MappingFragment StoreEntitySet="causes_medicamentos">
+          <ScalarProperty Name="idCauseMedicamento" ColumnName="idCauseMedicamento" />
+          <ScalarProperty Name="idCause" ColumnName="idCause" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CuadroBasico" ColumnName="CuadroBasico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes">
+      <EntityTypeMapping TypeName="medicuriModel.clientes">
+        <MappingFragment StoreEntitySet="clientes">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idTipoCliente" ColumnName="idTipoCliente" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="idMunicipio" ColumnName="idMunicipio" />
+          <ScalarProperty Name="idPoblacion" ColumnName="idPoblacion" />
+          <ScalarProperty Name="idColonia" ColumnName="idColonia" />
+          <ScalarProperty Name="Clave1" ColumnName="Clave1" />
+          <ScalarProperty Name="Clave2" ColumnName="Clave2" />
+          <ScalarProperty Name="Clave3" ColumnName="Clave3" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="TipoPersona" ColumnName="TipoPersona" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="Curp" ColumnName="Curp" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumeroExt" ColumnName="NumeroExt" />
+          <ScalarProperty Name="NumeroInt" ColumnName="NumeroInt" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="Campo1" ColumnName="Campo1" />
+          <ScalarProperty Name="Campo2" ColumnName="Campo2" />
+          <ScalarProperty Name="Campo3" ColumnName="Campo3" />
+          <ScalarProperty Name="Campo4" ColumnName="Campo4" />
+          <ScalarProperty Name="Campo5" ColumnName="Campo5" />
+          <ScalarProperty Name="Campo6" ColumnName="Campo6" />
+          <ScalarProperty Name="Campo7" ColumnName="Campo7" />
+          <ScalarProperty Name="Campo8" ColumnName="Campo8" />
+          <ScalarProperty Name="Campo9" ColumnName="Campo9" />
+          <ScalarProperty Name="Campo10" ColumnName="Campo10" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes_contacto">
+      <EntityTypeMapping TypeName="medicuriModel.clientes_contacto">
+        <MappingFragment StoreEntitySet="clientes_contacto">
+          <ScalarProperty Name="idContacto" ColumnName="idContacto" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="colonias">
+      <EntityTypeMapping TypeName="medicuriModel.colonias">
+        <MappingFragment StoreEntitySet="colonias">
+          <ScalarProperty Name="idColonia" ColumnName="idColonia" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="IdPoblacion" ColumnName="IdPoblacion" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ensamble">
+      <EntityTypeMapping TypeName="medicuriModel.ensamble">
+        <MappingFragment StoreEntitySet="ensamble">
+          <ScalarProperty Name="idEnsamble" ColumnName="idEnsamble" />
+          <ScalarProperty Name="ClaveBom" ColumnName="ClaveBom" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PrecioMinimo" ColumnName="PrecioMinimo" />
+          <ScalarProperty Name="PrecioPublico" ColumnName="PrecioPublico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ensamble_productos">
+      <EntityTypeMapping TypeName="medicuriModel.ensamble_productos">
+        <MappingFragment StoreEntitySet="ensamble_productos">
+          <ScalarProperty Name="idEnsambleProducto" ColumnName="idEnsambleProducto" />
+          <ScalarProperty Name="idEnsamble" ColumnName="idEnsamble" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estados">
+      <EntityTypeMapping TypeName="medicuriModel.estados">
+        <MappingFragment StoreEntitySet="estados">
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FacturacionDeRecetas">
+      <EntityTypeMapping TypeName="medicuriModel.FacturacionDeRecetas">
+        <MappingFragment StoreEntitySet="FacturacionDeRecetas">
+          <ScalarProperty Name="idFacturacionReceta" ColumnName="idFacturacionReceta" />
+          <ScalarProperty Name="idLineaCredito" ColumnName="idLineaCredito" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="facturas">
+      <EntityTypeMapping TypeName="medicuriModel.facturas">
+        <MappingFragment StoreEntitySet="facturas">
+          <ScalarProperty Name="NumeroCuentaPago" ColumnName="NumeroCuentaPago" />
+          <ScalarProperty Name="idMetodoPago" ColumnName="idMetodoPago" />
+          <ScalarProperty Name="idTipoFormaPago" ColumnName="idTipoFormaPago" />
+          <ScalarProperty Name="idFactura" ColumnName="idFactura" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idRemision" ColumnName="idRemision" />
+          <ScalarProperty Name="idReceta" ColumnName="idReceta" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TipoFactura" ColumnName="TipoFactura" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Pedimento" ColumnName="Pedimento" />
+          <ScalarProperty Name="FechaAplicacion" ColumnName="FechaAplicacion" />
+          <ScalarProperty Name="Vendedor" ColumnName="Vendedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="facturas_partida">
+      <EntityTypeMapping TypeName="medicuriModel.facturas_partida">
+        <MappingFragment StoreEntitySet="facturas_partida">
+          <ScalarProperty Name="idPartida" ColumnName="idPartida" />
+          <ScalarProperty Name="idFactura" ColumnName="idFactura" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idEnsamble" ColumnName="idEnsamble" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+          <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+          <ScalarProperty Name="IEPS" ColumnName="IEPS" />
+          <ScalarProperty Name="Imp1" ColumnName="Imp1" />
+          <ScalarProperty Name="Imp2" ColumnName="Imp2" />
+          <ScalarProperty Name="Iva" ColumnName="Iva" />
+          <ScalarProperty Name="Comision" ColumnName="Comision" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faltantes">
+      <EntityTypeMapping TypeName="medicuriModel.faltantes">
+        <MappingFragment StoreEntitySet="faltantes">
+          <ScalarProperty Name="idFaltante" ColumnName="idFaltante" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idReceta" ColumnName="idReceta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventario">
+      <EntityTypeMapping TypeName="medicuriModel.inventario">
+        <MappingFragment StoreEntitySet="inventario">
+          <ScalarProperty Name="idAlmacenSalida" ColumnName="idAlmacenSalida" />
+          <ScalarProperty Name="idInventarioMov" ColumnName="idInventarioMov" />
+          <ScalarProperty Name="idTipoMovimiento" ColumnName="idTipoMovimiento" />
+          <ScalarProperty Name="idLineaCredito" ColumnName="idLineaCredito" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Pedimento" ColumnName="Pedimento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventario_partida">
+      <EntityTypeMapping TypeName="medicuriModel.inventario_partida">
+        <MappingFragment StoreEntitySet="inventario_partida">
+          <ScalarProperty Name="idPartidaInv" ColumnName="idPartidaInv" />
+          <ScalarProperty Name="idInventarioMov" ColumnName="idInventarioMov" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="NoSerie" ColumnName="NoSerie" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lineas_creditos">
+      <EntityTypeMapping TypeName="medicuriModel.lineas_creditos">
+        <MappingFragment StoreEntitySet="lineas_creditos">
+          <ScalarProperty Name="idLineaCredito" ColumnName="idLineaCredito" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="InstitucionEmisora" ColumnName="InstitucionEmisora" />
+          <ScalarProperty Name="FuenteCuenta" ColumnName="FuenteCuenta" />
+          <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="FechaMinistracion" ColumnName="FechaMinistracion" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="Campo1" ColumnName="Campo1" />
+          <ScalarProperty Name="Campo2" ColumnName="Campo2" />
+          <ScalarProperty Name="Campo3" ColumnName="Campo3" />
+          <ScalarProperty Name="Campo4" ColumnName="Campo4" />
+          <ScalarProperty Name="Campo5" ColumnName="Campo5" />
+          <ScalarProperty Name="Campo6" ColumnName="Campo6" />
+          <ScalarProperty Name="Campo7" ColumnName="Campo7" />
+          <ScalarProperty Name="Campo8" ColumnName="Campo8" />
+          <ScalarProperty Name="Campo9" ColumnName="Campo9" />
+          <ScalarProperty Name="Campo10" ColumnName="Campo10" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="municipios">
+      <EntityTypeMapping TypeName="medicuriModel.municipios">
+        <MappingFragment StoreEntitySet="municipios">
+          <ScalarProperty Name="idMunicipio" ColumnName="idMunicipio" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedidos">
+      <EntityTypeMapping TypeName="medicuriModel.pedidos">
+        <MappingFragment StoreEntitySet="pedidos">
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedidos_partida">
+      <EntityTypeMapping TypeName="medicuriModel.pedidos_partida">
+        <MappingFragment StoreEntitySet="pedidos_partida">
+          <ScalarProperty Name="idPartida" ColumnName="idPartida" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idEnsamble" ColumnName="idEnsamble" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+          <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+          <ScalarProperty Name="IEPS" ColumnName="IEPS" />
+          <ScalarProperty Name="Imp1" ColumnName="Imp1" />
+          <ScalarProperty Name="Imp2" ColumnName="Imp2" />
+          <ScalarProperty Name="Iva" ColumnName="Iva" />
+          <ScalarProperty Name="Comision" ColumnName="Comision" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="perfiles">
+      <EntityTypeMapping TypeName="medicuriModel.perfiles">
+        <MappingFragment StoreEntitySet="perfiles">
+          <ScalarProperty Name="idPerfil" ColumnName="idPerfil" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descrpcion" ColumnName="Descrpcion" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permisos">
+      <EntityTypeMapping TypeName="medicuriModel.permisos">
+        <MappingFragment StoreEntitySet="permisos">
+          <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permisos_perfiles">
+      <EntityTypeMapping TypeName="medicuriModel.permisos_perfiles">
+        <MappingFragment StoreEntitySet="permisos_perfiles">
+          <ScalarProperty Name="idPermisoPerfil" ColumnName="idPermisoPerfil" />
+          <ScalarProperty Name="idPerfil" ColumnName="idPerfil" />
+          <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
+          <ScalarProperty Name="TipoAcceso" ColumnName="TipoAcceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permisos_usuarios">
+      <EntityTypeMapping TypeName="medicuriModel.permisos_usuarios">
+        <MappingFragment StoreEntitySet="permisos_usuarios">
+          <ScalarProperty Name="idPermisoUsuario" ColumnName="idPermisoUsuario" />
+          <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="TipoAcceso" ColumnName="TipoAcceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="poblaciones">
+      <EntityTypeMapping TypeName="medicuriModel.poblaciones">
+        <MappingFragment StoreEntitySet="poblaciones">
+          <ScalarProperty Name="idPoblacion" ColumnName="idPoblacion" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="idMunicipio" ColumnName="idMunicipio" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos">
+      <EntityTypeMapping TypeName="medicuriModel.productos">
+        <MappingFragment StoreEntitySet="productos">
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idTipoProducto" ColumnName="idTipoProducto" />
+          <ScalarProperty Name="idTipoIva" ColumnName="idTipoIva" />
+          <ScalarProperty Name="Clave1" ColumnName="Clave1" />
+          <ScalarProperty Name="Clave2" ColumnName="Clave2" />
+          <ScalarProperty Name="Clave3" ColumnName="Clave3" />
+          <ScalarProperty Name="Clave4" ColumnName="Clave4" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Presentacion" ColumnName="Presentacion" />
+          <ScalarProperty Name="Costeo" ColumnName="Costeo" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+          <ScalarProperty Name="DescripcionAdicional" ColumnName="DescripcionAdicional" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="PrecioPublico" ColumnName="PrecioPublico" />
+          <ScalarProperty Name="Precio1" ColumnName="Precio1" />
+          <ScalarProperty Name="Precio2" ColumnName="Precio2" />
+          <ScalarProperty Name="Precio3" ColumnName="Precio3" />
+          <ScalarProperty Name="PrecioMinimo" ColumnName="PrecioMinimo" />
+          <ScalarProperty Name="TipoMoneda" ColumnName="TipoMoneda" />
+          <ScalarProperty Name="TasaIeps" ColumnName="TasaIeps" />
+          <ScalarProperty Name="TasaImpuesto1" ColumnName="TasaImpuesto1" />
+          <ScalarProperty Name="TasaImpuesto2" ColumnName="TasaImpuesto2" />
+          <ScalarProperty Name="ManejaLote" ColumnName="ManejaLote" />
+          <ScalarProperty Name="ManejaSeries" ColumnName="ManejaSeries" />
+          <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+          <ScalarProperty Name="StockMaximo" ColumnName="StockMaximo" />
+          <ScalarProperty Name="DiasResurtido" ColumnName="DiasResurtido" />
+          <ScalarProperty Name="Pedimento" ColumnName="Pedimento" />
+          <ScalarProperty Name="Campo1" ColumnName="Campo1" />
+          <ScalarProperty Name="Campo2" ColumnName="Campo2" />
+          <ScalarProperty Name="Campo3" ColumnName="Campo3" />
+          <ScalarProperty Name="Campo4" ColumnName="Campo4" />
+          <ScalarProperty Name="Campo5" ColumnName="Campo5" />
+          <ScalarProperty Name="Campo6" ColumnName="Campo6" />
+          <ScalarProperty Name="Campo7" ColumnName="Campo7" />
+          <ScalarProperty Name="Campo8" ColumnName="Campo8" />
+          <ScalarProperty Name="Campo9" ColumnName="Campo9" />
+          <ScalarProperty Name="Campo10" ColumnName="Campo10" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos_almacen">
+      <EntityTypeMapping TypeName="medicuriModel.productos_almacen">
+        <MappingFragment StoreEntitySet="productos_almacen">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="NoSerie" ColumnName="NoSerie" />
+          <ScalarProperty Name="Bloqueado" ColumnName="Bloqueado" />
+          <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+          <ScalarProperty Name="idLineaCredito" ColumnName="idLineaCredito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos_almacen_stocks">
+      <EntityTypeMapping TypeName="medicuriModel.productos_almacen_stocks">
+        <MappingFragment StoreEntitySet="productos_almacen_stocks">
+          <ScalarProperty Name="idProAlmStocks" ColumnName="idProAlmStocks" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="StockMin" ColumnName="StockMin" />
+          <ScalarProperty Name="StockMax" ColumnName="StockMax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos_lotes">
+      <EntityTypeMapping TypeName="medicuriModel.productos_lotes">
+        <MappingFragment StoreEntitySet="productos_lotes">
+          <ScalarProperty Name="idProductosLotes" ColumnName="idProductosLotes" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos_series">
+      <EntityTypeMapping TypeName="medicuriModel.productos_series">
+        <MappingFragment StoreEntitySet="productos_series">
+          <ScalarProperty Name="idProductoSeries" ColumnName="idProductoSeries" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="NumeroSerie" ColumnName="NumeroSerie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveedores">
+      <EntityTypeMapping TypeName="medicuriModel.proveedores">
+        <MappingFragment StoreEntitySet="proveedores">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdTipoProveedor" ColumnName="IdTipoProveedor" />
+          <ScalarProperty Name="IdColonia" ColumnName="IdColonia" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="IdPoblacion" ColumnName="IdPoblacion" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="TipoPersona" ColumnName="TipoPersona" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="Curp" ColumnName="Curp" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumeroExt" ColumnName="NumeroExt" />
+          <ScalarProperty Name="NumeroInt" ColumnName="NumeroInt" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="Campo1" ColumnName="Campo1" />
+          <ScalarProperty Name="Campo2" ColumnName="Campo2" />
+          <ScalarProperty Name="Campo3" ColumnName="Campo3" />
+          <ScalarProperty Name="Campo4" ColumnName="Campo4" />
+          <ScalarProperty Name="Campo5" ColumnName="Campo5" />
+          <ScalarProperty Name="Campo6" ColumnName="Campo6" />
+          <ScalarProperty Name="Campo7" ColumnName="Campo7" />
+          <ScalarProperty Name="Campo8" ColumnName="Campo8" />
+          <ScalarProperty Name="Campo9" ColumnName="Campo9" />
+          <ScalarProperty Name="Campo10" ColumnName="Campo10" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveedores_contactos">
+      <EntityTypeMapping TypeName="medicuriModel.proveedores_contactos">
+        <MappingFragment StoreEntitySet="proveedores_contactos">
+          <ScalarProperty Name="IdContactoProveedor" ColumnName="IdContactoProveedor" />
+          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveedores_productos">
+      <EntityTypeMapping TypeName="medicuriModel.proveedores_productos">
+        <MappingFragment StoreEntitySet="proveedores_productos">
+          <ScalarProperty Name="idProveedorProducto" ColumnName="idProveedorProducto" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recetas">
+      <EntityTypeMapping TypeName="medicuriModel.recetas">
+        <MappingFragment StoreEntitySet="recetas">
+          <ScalarProperty Name="idReceta" ColumnName="idReceta" />
+          <ScalarProperty Name="idTipoReceta" ColumnName="idTipoReceta" />
+          <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="idEstadoExp" ColumnName="idEstadoExp" />
+          <ScalarProperty Name="idMunicipioExp" ColumnName="idMunicipioExp" />
+          <ScalarProperty Name="idPoblacionExp" ColumnName="idPoblacionExp" />
+          <ScalarProperty Name="idColoniaExp" ColumnName="idColoniaExp" />
+          <ScalarProperty Name="idEstadoSur" ColumnName="idEstadoSur" />
+          <ScalarProperty Name="idMunicipioSur" ColumnName="idMunicipioSur" />
+          <ScalarProperty Name="idPoblacionSur" ColumnName="idPoblacionSur" />
+          <ScalarProperty Name="idColoniaSur" ColumnName="idColoniaSur" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="ClaveMed" ColumnName="ClaveMed" />
+          <ScalarProperty Name="Paciente" ColumnName="Paciente" />
+          <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="EstatusMedico" ColumnName="EstatusMedico" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recetas_partida">
+      <EntityTypeMapping TypeName="medicuriModel.recetas_partida">
+        <MappingFragment StoreEntitySet="recetas_partida">
+          <ScalarProperty Name="idRecetaPartida" ColumnName="idRecetaPartida" />
+          <ScalarProperty Name="idReceta" ColumnName="idReceta" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idEnsamble" ColumnName="idEnsamble" />
+          <ScalarProperty Name="idLineaCredito" ColumnName="idLineaCredito" />
+          <ScalarProperty Name="idCausesCie" ColumnName="idCausesCie" />
+          <ScalarProperty Name="CantidadRecetada" ColumnName="CantidadRecetada" />
+          <ScalarProperty Name="CantidaSurtida" ColumnName="CantidaSurtida" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="NoSerie" ColumnName="NoSerie" />
+          <ScalarProperty Name="PrimeraIntencion" ColumnName="PrimeraIntencion" />
+          <ScalarProperty Name="SegundaIntencion" ColumnName="SegundaIntencion" />
+          <ScalarProperty Name="Cause" ColumnName="Cause" />
+          <ScalarProperty Name="Factura" ColumnName="Factura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recetas_partida_faltantes">
+      <EntityTypeMapping TypeName="medicuriModel.recetas_partida_faltantes">
+        <MappingFragment StoreEntitySet="recetas_partida_faltantes">
+          <ScalarProperty Name="idRecetasPartidaFaltantes" ColumnName="idRecetasPartidaFaltantes" />
+          <ScalarProperty Name="idReceta" ColumnName="idReceta" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remisiones">
+      <EntityTypeMapping TypeName="medicuriModel.remisiones">
+        <MappingFragment StoreEntitySet="remisiones">
+          <ScalarProperty Name="idRemision" ColumnName="idRemision" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remisiones_partida">
+      <EntityTypeMapping TypeName="medicuriModel.remisiones_partida">
+        <MappingFragment StoreEntitySet="remisiones_partida">
+          <ScalarProperty Name="idPartida" ColumnName="idPartida" />
+          <ScalarProperty Name="idRemision" ColumnName="idRemision" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idEnsamble" ColumnName="idEnsamble" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+          <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+          <ScalarProperty Name="IEPS" ColumnName="IEPS" />
+          <ScalarProperty Name="Imp1" ColumnName="Imp1" />
+          <ScalarProperty Name="Imp2" ColumnName="Imp2" />
+          <ScalarProperty Name="Iva" ColumnName="Iva" />
+          <ScalarProperty Name="Comision" ColumnName="Comision" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_iva">
+      <EntityTypeMapping TypeName="medicuriModel.tipo_iva">
+        <MappingFragment StoreEntitySet="tipo_iva">
+          <ScalarProperty Name="idTipoIva" ColumnName="idTipoIva" />
+          <ScalarProperty Name="Zona" ColumnName="Zona" />
+          <ScalarProperty Name="Iva" ColumnName="Iva" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_movientos">
+      <EntityTypeMapping TypeName="medicuriModel.tipo_movientos">
+        <MappingFragment StoreEntitySet="tipo_movientos">
+          <ScalarProperty Name="idTipoMovimiento" ColumnName="idTipoMovimiento" />
+          <ScalarProperty Name="TipoMovimiento" ColumnName="TipoMovimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipos">
+      <EntityTypeMapping TypeName="medicuriModel.tipos">
+        <MappingFragment StoreEntitySet="tipos">
+          <ScalarProperty Name="idTipo" ColumnName="idTipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Almacenes" ColumnName="Almacenes" />
+          <ScalarProperty Name="Clientes" ColumnName="Clientes" />
+          <ScalarProperty Name="Productos" ColumnName="Productos" />
+          <ScalarProperty Name="Proveedores" ColumnName="Proveedores" />
+          <ScalarProperty Name="Vendedores" ColumnName="Vendedores" />
+          <ScalarProperty Name="Recetas" ColumnName="Recetas" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="medicuriModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idAlmacen" ColumnName="idAlmacen" />
+          <ScalarProperty Name="idPerfil" ColumnName="idPerfil" />
+          <ScalarProperty Name="FiltradoActivado" ColumnName="FiltradoActivado" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Campo1" ColumnName="Campo1" />
+          <ScalarProperty Name="Campo2" ColumnName="Campo2" />
+          <ScalarProperty Name="Campo3" ColumnName="Campo3" />
+          <ScalarProperty Name="Campo4" ColumnName="Campo4" />
+          <ScalarProperty Name="Campo5" ColumnName="Campo5" />
+          <ScalarProperty Name="Campo6" ColumnName="Campo6" />
+          <ScalarProperty Name="Campo7" ColumnName="Campo7" />
+          <ScalarProperty Name="Campo8" ColumnName="Campo8" />
+          <ScalarProperty Name="Campo9" ColumnName="Campo9" />
+          <ScalarProperty Name="Campo10" ColumnName="Campo10" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vendedores">
+      <EntityTypeMapping TypeName="medicuriModel.vendedores">
+        <MappingFragment StoreEntitySet="vendedores">
+          <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
+          <ScalarProperty Name="IdTipoVendedor" ColumnName="IdTipoVendedor" />
+          <ScalarProperty Name="IdColonia" ColumnName="IdColonia" />
+          <ScalarProperty Name="IdPoblacion" ColumnName="IdPoblacion" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdEspecialidad" ColumnName="IdEspecialidad" />
+          <ScalarProperty Name="IdVinculacion" ColumnName="IdVinculacion" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="TipoPersona" ColumnName="TipoPersona" />
+          <ScalarProperty Name="CedulaProfesional" ColumnName="CedulaProfesional" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="Curp" ColumnName="Curp" />
+          <ScalarProperty Name="TituloExpedido" ColumnName="TituloExpedido" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumeroExt" ColumnName="NumeroExt" />
+          <ScalarProperty Name="NumeroInt" ColumnName="NumeroInt" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="Campo1" ColumnName="Campo1" />
+          <ScalarProperty Name="Campo2" ColumnName="Campo2" />
+          <ScalarProperty Name="Campo3" ColumnName="Campo3" />
+          <ScalarProperty Name="Campo4" ColumnName="Campo4" />
+          <ScalarProperty Name="Campo5" ColumnName="Campo5" />
+          <ScalarProperty Name="Campo6" ColumnName="Campo6" />
+          <ScalarProperty Name="Campo7" ColumnName="Campo7" />
+          <ScalarProperty Name="Campo8" ColumnName="Campo8" />
+          <ScalarProperty Name="Campo9" ColumnName="Campo9" />
+          <ScalarProperty Name="Campo10" ColumnName="Campo10" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vendedores_especialidad">
+      <EntityTypeMapping TypeName="medicuriModel.vendedores_especialidad">
+        <MappingFragment StoreEntitySet="vendedores_especialidad">
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="Especialidad" ColumnName="Especialidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vendedores_vinculacion">
+      <EntityTypeMapping TypeName="medicuriModel.vendedores_vinculacion">
+        <MappingFragment StoreEntitySet="vendedores_vinculacion">
+          <ScalarProperty Name="idVinculacion" ColumnName="idVinculacion" />
+          <ScalarProperty Name="Vinculacion" ColumnName="Vinculacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="metodo_pago">
+      <EntityTypeMapping TypeName="medicuriModel.metodo_pago">
+        <MappingFragment StoreEntitySet="metodo_pago">
+          <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
+          <ScalarProperty Name="idMetodoPago" ColumnName="idMetodoPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_forma_pago">
+      <EntityTypeMapping TypeName="medicuriModel.tipo_forma_pago">
+        <MappingFragment StoreEntitySet="tipo_forma_pago">
+          <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+          <ScalarProperty Name="idTipoFormaPago" ColumnName="idTipoFormaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,2431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="medicuriModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="medicuriModelStoreContainer">
+    <EntitySet Name="almacenes" EntityType="medicuriModel.Store.almacenes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="almacenes_contactos" EntityType="medicuriModel.Store.almacenes_contactos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="bitacora" EntityType="medicuriModel.Store.bitacora" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="bitacora_faltantes" EntityType="medicuriModel.Store.bitacora_faltantes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="campos_editables" EntityType="medicuriModel.Store.campos_editables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="causes" EntityType="medicuriModel.Store.causes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="causes_cie" EntityType="medicuriModel.Store.causes_cie" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="causes_medicamentos" EntityType="medicuriModel.Store.causes_medicamentos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="clientes" EntityType="medicuriModel.Store.clientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="clientes_contacto" EntityType="medicuriModel.Store.clientes_contacto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="colonias" EntityType="medicuriModel.Store.colonias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ensamble" EntityType="medicuriModel.Store.ensamble" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ensamble_productos" EntityType="medicuriModel.Store.ensamble_productos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="estados" EntityType="medicuriModel.Store.estados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FacturacionDeRecetas" EntityType="medicuriModel.Store.FacturacionDeRecetas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="facturas" EntityType="medicuriModel.Store.facturas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="facturas_partida" EntityType="medicuriModel.Store.facturas_partida" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="faltantes" EntityType="medicuriModel.Store.faltantes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="inventario" EntityType="medicuriModel.Store.inventario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="inventario_partida" EntityType="medicuriModel.Store.inventario_partida" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lineas_creditos" EntityType="medicuriModel.Store.lineas_creditos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="metodo_pago" EntityType="medicuriModel.Store.metodo_pago" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="municipios" EntityType="medicuriModel.Store.municipios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pedidos" EntityType="medicuriModel.Store.pedidos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pedidos_partida" EntityType="medicuriModel.Store.pedidos_partida" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="perfiles" EntityType="medicuriModel.Store.perfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="permisos" EntityType="medicuriModel.Store.permisos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="permisos_perfiles" EntityType="medicuriModel.Store.permisos_perfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="permisos_usuarios" EntityType="medicuriModel.Store.permisos_usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="poblaciones" EntityType="medicuriModel.Store.poblaciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="productos" EntityType="medicuriModel.Store.productos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="productos_almacen" EntityType="medicuriModel.Store.productos_almacen" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="productos_almacen_stocks" EntityType="medicuriModel.Store.productos_almacen_stocks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="productos_lotes" EntityType="medicuriModel.Store.productos_lotes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="productos_series" EntityType="medicuriModel.Store.productos_series" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="proveedores" EntityType="medicuriModel.Store.proveedores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="proveedores_contactos" EntityType="medicuriModel.Store.proveedores_contactos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="proveedores_productos" EntityType="medicuriModel.Store.proveedores_productos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="recetas" EntityType="medicuriModel.Store.recetas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="recetas_partida" EntityType="medicuriModel.Store.recetas_partida" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="recetas_partida_faltantes" EntityType="medicuriModel.Store.recetas_partida_faltantes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="remisiones" EntityType="medicuriModel.Store.remisiones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="remisiones_partida" EntityType="medicuriModel.Store.remisiones_partida" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipo_forma_pago" EntityType="medicuriModel.Store.tipo_forma_pago" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipo_iva" EntityType="medicuriModel.Store.tipo_iva" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipo_movientos" EntityType="medicuriModel.Store.tipo_movientos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipos" EntityType="medicuriModel.Store.tipos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="usuarios" EntityType="medicuriModel.Store.usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vendedores" EntityType="medicuriModel.Store.vendedores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vendedores_especialidad" EntityType="medicuriModel.Store.vendedores_especialidad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vendedores_vinculacion" EntityType="medicuriModel.Store.vendedores_vinculacion" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_almacenes_colonias1" Association="medicuriModel.Store.FK_almacenes_colonias1">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="almacenes" EntitySet="almacenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_almacenes_contactos_almacenes1" Association="medicuriModel.Store.FK_almacenes_contactos_almacenes1">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="almacenes_contactos" EntitySet="almacenes_contactos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_almacenes_estados1" Association="medicuriModel.Store.FK_almacenes_estados1">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="almacenes" EntitySet="almacenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_almacenes_municipios" Association="medicuriModel.Store.FK_almacenes_municipios">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="almacenes" EntitySet="almacenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_almacenes_poblaciones" Association="medicuriModel.Store.FK_almacenes_poblaciones">
+      <End Role="poblaciones" EntitySet="poblaciones" />
+      <End Role="almacenes" EntitySet="almacenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_almacenes_tipos" Association="medicuriModel.Store.FK_almacenes_tipos">
+      <End Role="tipos" EntitySet="tipos" />
+      <End Role="almacenes" EntitySet="almacenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_bitacora_faltantes_almacenes" Association="medicuriModel.Store.FK_bitacora_faltantes_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="bitacora_faltantes" EntitySet="bitacora_faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_bitacora_faltantes_productos" Association="medicuriModel.Store.FK_bitacora_faltantes_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="bitacora_faltantes" EntitySet="bitacora_faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_bitacora_faltantes_recetas" Association="medicuriModel.Store.FK_bitacora_faltantes_recetas">
+      <End Role="recetas" EntitySet="recetas" />
+      <End Role="bitacora_faltantes" EntitySet="bitacora_faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_causes_cie_causes" Association="medicuriModel.Store.FK_causes_cie_causes">
+      <End Role="causes" EntitySet="causes" />
+      <End Role="causes_cie" EntitySet="causes_cie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_causes_medicamentos_causes" Association="medicuriModel.Store.FK_causes_medicamentos_causes">
+      <End Role="causes" EntitySet="causes" />
+      <End Role="causes_medicamentos" EntitySet="causes_medicamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_causes_medicamentos_productos" Association="medicuriModel.Store.FK_causes_medicamentos_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="causes_medicamentos" EntitySet="causes_medicamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_colonias" Association="medicuriModel.Store.FK_clientes_colonias">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="clientes" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_contacto_clientes" Association="medicuriModel.Store.FK_clientes_contacto_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="clientes_contacto" EntitySet="clientes_contacto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_estados" Association="medicuriModel.Store.FK_clientes_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="clientes" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_municipios" Association="medicuriModel.Store.FK_clientes_municipios">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="clientes" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_poblaciones" Association="medicuriModel.Store.FK_clientes_poblaciones">
+      <End Role="poblaciones" EntitySet="poblaciones" />
+      <End Role="clientes" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_tipos" Association="medicuriModel.Store.FK_clientes_tipos">
+      <End Role="tipos" EntitySet="tipos" />
+      <End Role="clientes" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_colonias_estados" Association="medicuriModel.Store.FK_colonias_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="colonias" EntitySet="colonias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_colonias_municipios" Association="medicuriModel.Store.FK_colonias_municipios">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="colonias" EntitySet="colonias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_colonias_poblaciones" Association="medicuriModel.Store.FK_colonias_poblaciones">
+      <End Role="poblaciones" EntitySet="poblaciones" />
+      <End Role="colonias" EntitySet="colonias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ensamble_productos_ensamble" Association="medicuriModel.Store.FK_ensamble_productos_ensamble">
+      <End Role="ensamble" EntitySet="ensamble" />
+      <End Role="ensamble_productos" EntitySet="ensamble_productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ensamble_productos_productos" Association="medicuriModel.Store.FK_ensamble_productos_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="ensamble_productos" EntitySet="ensamble_productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturacionDeRecetas_lineas_creditos" Association="medicuriModel.Store.FK_FacturacionDeRecetas_lineas_creditos">
+      <End Role="lineas_creditos" EntitySet="lineas_creditos" />
+      <End Role="FacturacionDeRecetas" EntitySet="FacturacionDeRecetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_facturas" Association="medicuriModel.Store.FK_facturas_facturas">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_metodo_pago" Association="medicuriModel.Store.FK_facturas_metodo_pago">
+      <End Role="metodo_pago" EntitySet="metodo_pago" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_partida_ensamble" Association="medicuriModel.Store.FK_facturas_partida_ensamble">
+      <End Role="ensamble" EntitySet="ensamble" />
+      <End Role="facturas_partida" EntitySet="facturas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_partida_facturas" Association="medicuriModel.Store.FK_facturas_partida_facturas">
+      <End Role="facturas" EntitySet="facturas" />
+      <End Role="facturas_partida" EntitySet="facturas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_partida_productos" Association="medicuriModel.Store.FK_facturas_partida_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="facturas_partida" EntitySet="facturas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_pedidos" Association="medicuriModel.Store.FK_facturas_pedidos">
+      <End Role="pedidos" EntitySet="pedidos" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_recetas" Association="medicuriModel.Store.FK_facturas_recetas">
+      <End Role="recetas" EntitySet="recetas" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_remisiones" Association="medicuriModel.Store.FK_facturas_remisiones">
+      <End Role="remisiones" EntitySet="remisiones" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_Tipo_forma_pago" Association="medicuriModel.Store.FK_facturas_Tipo_forma_pago">
+      <End Role="tipo_forma_pago" EntitySet="tipo_forma_pago" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_facturas_usuarios" Association="medicuriModel.Store.FK_facturas_usuarios">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faltantes_almacenes" Association="medicuriModel.Store.FK_faltantes_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="faltantes" EntitySet="faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faltantes_productos" Association="medicuriModel.Store.FK_faltantes_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="faltantes" EntitySet="faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inventario_almacenes" Association="medicuriModel.Store.FK_inventario_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="inventario" EntitySet="inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inventario_almacenesSalida" Association="medicuriModel.Store.FK_inventario_almacenesSalida">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="inventario" EntitySet="inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inventario_partida_inventario" Association="medicuriModel.Store.FK_inventario_partida_inventario">
+      <End Role="inventario" EntitySet="inventario" />
+      <End Role="inventario_partida" EntitySet="inventario_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inventario_partida_productos" Association="medicuriModel.Store.FK_inventario_partida_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="inventario_partida" EntitySet="inventario_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_municipios_estados" Association="medicuriModel.Store.FK_municipios_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="municipios" EntitySet="municipios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_clientes" Association="medicuriModel.Store.FK_pedidos_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="pedidos" EntitySet="pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_partida_ensamble" Association="medicuriModel.Store.FK_pedidos_partida_ensamble">
+      <End Role="ensamble" EntitySet="ensamble" />
+      <End Role="pedidos_partida" EntitySet="pedidos_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_partida_pedidos" Association="medicuriModel.Store.FK_pedidos_partida_pedidos">
+      <End Role="pedidos" EntitySet="pedidos" />
+      <End Role="pedidos_partida" EntitySet="pedidos_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_partida_productos" Association="medicuriModel.Store.FK_pedidos_partida_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="pedidos_partida" EntitySet="pedidos_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_permisos_perfiles_perfiles" Association="medicuriModel.Store.FK_permisos_perfiles_perfiles">
+      <End Role="perfiles" EntitySet="perfiles" />
+      <End Role="permisos_perfiles" EntitySet="permisos_perfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_permisos_perfiles_permisos" Association="medicuriModel.Store.FK_permisos_perfiles_permisos">
+      <End Role="permisos" EntitySet="permisos" />
+      <End Role="permisos_perfiles" EntitySet="permisos_perfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_permisos_usuarios_permisos" Association="medicuriModel.Store.FK_permisos_usuarios_permisos">
+      <End Role="permisos" EntitySet="permisos" />
+      <End Role="permisos_usuarios" EntitySet="permisos_usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_permisos_usuarios_usuarios" Association="medicuriModel.Store.FK_permisos_usuarios_usuarios">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="permisos_usuarios" EntitySet="permisos_usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_poblaciones_estados" Association="medicuriModel.Store.FK_poblaciones_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="poblaciones" EntitySet="poblaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_poblaciones_municipios" Association="medicuriModel.Store.FK_poblaciones_municipios">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="poblaciones" EntitySet="poblaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_almacen_almacenes" Association="medicuriModel.Store.FK_productos_almacen_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="productos_almacen" EntitySet="productos_almacen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_almacen_lineas_creditos" Association="medicuriModel.Store.FK_productos_almacen_lineas_creditos">
+      <End Role="lineas_creditos" EntitySet="lineas_creditos" />
+      <End Role="productos_almacen" EntitySet="productos_almacen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_almacen_productos" Association="medicuriModel.Store.FK_productos_almacen_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="productos_almacen" EntitySet="productos_almacen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Almacen_Stocks_almacenes" Association="medicuriModel.Store.FK_Productos_Almacen_Stocks_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="productos_almacen_stocks" EntitySet="productos_almacen_stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Almacen_Stocks_productos" Association="medicuriModel.Store.FK_Productos_Almacen_Stocks_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="productos_almacen_stocks" EntitySet="productos_almacen_stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_lotes_productos" Association="medicuriModel.Store.FK_productos_lotes_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="productos_lotes" EntitySet="productos_lotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_series_productos" Association="medicuriModel.Store.FK_productos_series_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="productos_series" EntitySet="productos_series" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_tipo_iva" Association="medicuriModel.Store.FK_productos_tipo_iva">
+      <End Role="tipo_iva" EntitySet="tipo_iva" />
+      <End Role="productos" EntitySet="productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_tipos" Association="medicuriModel.Store.FK_productos_tipos">
+      <End Role="tipos" EntitySet="tipos" />
+      <End Role="productos" EntitySet="productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_colonias" Association="medicuriModel.Store.FK_proveedores_colonias">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="proveedores" EntitySet="proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_contactos_proveedores" Association="medicuriModel.Store.FK_proveedores_contactos_proveedores">
+      <End Role="proveedores" EntitySet="proveedores" />
+      <End Role="proveedores_contactos" EntitySet="proveedores_contactos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_estados" Association="medicuriModel.Store.FK_proveedores_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="proveedores" EntitySet="proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_municipios" Association="medicuriModel.Store.FK_proveedores_municipios">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="proveedores" EntitySet="proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_poblaciones" Association="medicuriModel.Store.FK_proveedores_poblaciones">
+      <End Role="poblaciones" EntitySet="poblaciones" />
+      <End Role="proveedores" EntitySet="proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_productos_productos" Association="medicuriModel.Store.FK_proveedores_productos_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="proveedores_productos" EntitySet="proveedores_productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_productos_proveedores" Association="medicuriModel.Store.FK_proveedores_productos_proveedores">
+      <End Role="proveedores" EntitySet="proveedores" />
+      <End Role="proveedores_productos" EntitySet="proveedores_productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_proveedores_tipos" Association="medicuriModel.Store.FK_proveedores_tipos">
+      <End Role="tipos" EntitySet="tipos" />
+      <End Role="proveedores" EntitySet="proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_almacenes" Association="medicuriModel.Store.FK_recetas_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_clientes" Association="medicuriModel.Store.FK_recetas_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_colonias" Association="medicuriModel.Store.FK_recetas_colonias">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_colonias1" Association="medicuriModel.Store.FK_recetas_colonias1">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_estados" Association="medicuriModel.Store.FK_recetas_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_estados1" Association="medicuriModel.Store.FK_recetas_estados1">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_municipios" Association="medicuriModel.Store.FK_recetas_municipios">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_municipios1" Association="medicuriModel.Store.FK_recetas_municipios1">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_causes_cie" Association="medicuriModel.Store.FK_recetas_partida_causes_cie">
+      <End Role="causes_cie" EntitySet="causes_cie" />
+      <End Role="recetas_partida" EntitySet="recetas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_ensamble" Association="medicuriModel.Store.FK_recetas_partida_ensamble">
+      <End Role="ensamble" EntitySet="ensamble" />
+      <End Role="recetas_partida" EntitySet="recetas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_faltantes_almacenes" Association="medicuriModel.Store.FK_recetas_partida_faltantes_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="recetas_partida_faltantes" EntitySet="recetas_partida_faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_faltantes_productos" Association="medicuriModel.Store.FK_recetas_partida_faltantes_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="recetas_partida_faltantes" EntitySet="recetas_partida_faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_faltantes_recetas" Association="medicuriModel.Store.FK_recetas_partida_faltantes_recetas">
+      <End Role="recetas" EntitySet="recetas" />
+      <End Role="recetas_partida_faltantes" EntitySet="recetas_partida_faltantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_lineas_creditos" Association="medicuriModel.Store.FK_recetas_partida_lineas_creditos">
+      <End Role="lineas_creditos" EntitySet="lineas_creditos" />
+      <End Role="recetas_partida" EntitySet="recetas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_productos" Association="medicuriModel.Store.FK_recetas_partida_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="recetas_partida" EntitySet="recetas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_partida_recetas" Association="medicuriModel.Store.FK_recetas_partida_recetas">
+      <End Role="recetas" EntitySet="recetas" />
+      <End Role="recetas_partida" EntitySet="recetas_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_poblaciones" Association="medicuriModel.Store.FK_recetas_poblaciones">
+      <End Role="poblaciones" EntitySet="poblaciones" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_poblaciones1" Association="medicuriModel.Store.FK_recetas_poblaciones1">
+      <End Role="poblaciones" EntitySet="poblaciones" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_tipos" Association="medicuriModel.Store.FK_recetas_tipos">
+      <End Role="tipos" EntitySet="tipos" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_recetas_vendedores" Association="medicuriModel.Store.FK_recetas_vendedores">
+      <End Role="vendedores" EntitySet="vendedores" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_remisiones_clientes" Association="medicuriModel.Store.FK_remisiones_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="remisiones" EntitySet="remisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_remisiones_partida_ensamble" Association="medicuriModel.Store.FK_remisiones_partida_ensamble">
+      <End Role="ensamble" EntitySet="ensamble" />
+      <End Role="remisiones_partida" EntitySet="remisiones_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_remisiones_partida_productos" Association="medicuriModel.Store.FK_remisiones_partida_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="remisiones_partida" EntitySet="remisiones_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_remisiones_partida_remisiones" Association="medicuriModel.Store.FK_remisiones_partida_remisiones">
+      <End Role="remisiones" EntitySet="remisiones" />
+      <End Role="remisiones_partida" EntitySet="remisiones_partida" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuarios_almacenes" Association="medicuriModel.Store.FK_usuarios_almacenes">
+      <End Role="almacenes" EntitySet="almacenes" />
+      <End Role="usuarios" EntitySet="usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuarios_perfiles" Association="medicuriModel.Store.FK_usuarios_perfiles">
+      <End Role="perfiles" EntitySet="perfiles" />
+      <End Role="usuarios" EntitySet="usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendedores_colonias" Association="medicuriModel.Store.FK_vendedores_colonias">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="vendedores" EntitySet="vendedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendedores_estados" Association="medicuriModel.Store.FK_vendedores_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="vendedores" EntitySet="vendedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendedores_municipios" Association="medicuriModel.Store.FK_vendedores_municipios">
+      <End Role="municipios" EntitySet="municipios" />
+      <End Role="vendedores" EntitySet="vendedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendedores_poblaciones" Association="medicuriModel.Store.FK_vendedores_poblaciones">
+      <End Role="poblaciones" EntitySet="poblaciones" />
+      <End Role="vendedores" EntitySet="vendedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendedores_tipos" Association="medicuriModel.Store.FK_vendedores_tipos">
+      <End Role="tipos" EntitySet="tipos" />
+      <End Role="vendedores" EntitySet="vendedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendedores_vendedores_especialidad" Association="medicuriModel.Store.FK_vendedores_vendedores_especialidad">
+      <End Role="vendedores_especialidad" EntitySet="vendedores_especialidad" />
+      <End Role="vendedores" EntitySet="vendedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendedores_vendedores_vinculacion" Association="medicuriModel.Store.FK_vendedores_vendedores_vinculacion">
+      <End Role="vendedores_vinculacion" EntitySet="vendedores_vinculacion" />
+      <End Role="vendedores" EntitySet="vendedores" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="almacenes">
+    <Key>
+      <PropertyRef Name="idAlmacen" />
+    </Key>
+    <Property Name="idAlmacen" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idTipoAlmacen" Type="int" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="75" />
+    <Property Name="NumeroExt" Type="nvarchar" MaxLength="5" />
+    <Property Name="NumeroInt" Type="nvarchar" MaxLength="5" />
+    <Property Name="idColonia" Type="int" Nullable="false" />
+    <Property Name="idMunicipio" Type="int" Nullable="false" />
+    <Property Name="idPoblacion" Type="int" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Pais" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodigoPostal" Type="nvarchar" MaxLength="5" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="Campo1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo5" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo6" Type="int" />
+    <Property Name="Campo7" Type="int" />
+    <Property Name="Campo8" Type="int" />
+    <Property Name="Campo9" Type="decimal" Scale="2" />
+    <Property Name="Campo10" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="almacenes_contactos">
+    <Key>
+      <PropertyRef Name="idContacto" />
+    </Key>
+    <Property Name="idContacto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="75" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bitacora">
+    <Key>
+      <PropertyRef Name="IdEntradaBitacora" />
+    </Key>
+    <Property Name="IdEntradaBitacora" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaEntradaSrv" Type="datetime" Nullable="false" />
+    <Property Name="FechaEntradaCte" Type="date" Nullable="false" />
+    <Property Name="Modulo" Type="nchar" Nullable="false" MaxLength="25" />
+    <Property Name="Usuario" Type="nchar" Nullable="false" MaxLength="25" />
+    <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="75" />
+    <Property Name="Accion" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="bitacora_faltantes">
+    <Key>
+      <PropertyRef Name="idBitacoraFaltantes" />
+    </Key>
+    <Property Name="idBitacoraFaltantes" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idReceta" Type="int" Nullable="false" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="campos_editables">
+    <Key>
+      <PropertyRef Name="idCampoEditable" />
+    </Key>
+    <Property Name="idCampoEditable" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Modulo" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Campo" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Valor" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="causes">
+    <Key>
+      <PropertyRef Name="idCause" />
+    </Key>
+    <Property Name="idCause" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Clave" Type="nchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Conglomerado" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="causes_cie">
+    <Key>
+      <PropertyRef Name="idCauseCie" />
+    </Key>
+    <Property Name="idCauseCie" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCause" Type="int" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tipo" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="causes_medicamentos">
+    <Key>
+      <PropertyRef Name="idCauseMedicamento" />
+    </Key>
+    <Property Name="idCauseMedicamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCause" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="CuadroBasico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idTipoCliente" Type="int" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="idMunicipio" Type="int" Nullable="false" />
+    <Property Name="idPoblacion" Type="int" Nullable="false" />
+    <Property Name="idColonia" Type="int" Nullable="false" />
+    <Property Name="Clave1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Clave2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Clave3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="75" />
+    <Property Name="TipoPersona" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="Curp" Type="nvarchar" MaxLength="18" />
+    <Property Name="Edad" Type="int" />
+    <Property Name="Sexo" Type="nvarchar" MaxLength="1" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="75" />
+    <Property Name="NumeroExt" Type="nvarchar" MaxLength="5" />
+    <Property Name="NumeroInt" Type="nvarchar" MaxLength="5" />
+    <Property Name="CodigoPostal" Type="nvarchar" MaxLength="5" />
+    <Property Name="Campo1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo5" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo6" Type="int" />
+    <Property Name="Campo7" Type="int" />
+    <Property Name="Campo8" Type="int" />
+    <Property Name="Campo9" Type="decimal" Scale="2" />
+    <Property Name="Campo10" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clientes_contacto">
+    <Key>
+      <PropertyRef Name="idContacto" />
+    </Key>
+    <Property Name="idContacto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="75" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Celular" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="CorreoElectronico" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="colonias">
+    <Key>
+      <PropertyRef Name="idColonia" />
+    </Key>
+    <Property Name="idColonia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdMunicipio" Type="int" Nullable="false" />
+    <Property Name="IdPoblacion" Type="int" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ensamble">
+    <Key>
+      <PropertyRef Name="idEnsamble" />
+    </Key>
+    <Property Name="idEnsamble" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClaveBom" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="UnidadMedida" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="PrecioMinimo" Type="decimal" Scale="2" />
+    <Property Name="PrecioPublico" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="ensamble_productos">
+    <Key>
+      <PropertyRef Name="idEnsambleProducto" />
+    </Key>
+    <Property Name="idEnsambleProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idEnsamble" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="estados">
+    <Key>
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="idEstado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FacturacionDeRecetas">
+    <Key>
+      <PropertyRef Name="idFacturacionReceta" />
+    </Key>
+    <Property Name="idFacturacionReceta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idLineaCredito" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="facturas">
+    <Key>
+      <PropertyRef Name="idFactura" />
+    </Key>
+    <Property Name="idFactura" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="idPedido" Type="int" />
+    <Property Name="idRemision" Type="int" />
+    <Property Name="idReceta" Type="int" />
+    <Property Name="idUsuario" Type="int" />
+    <Property Name="idTipoFormaPago" Type="int" Nullable="false" />
+    <Property Name="idMetodoPago" Type="int" Nullable="false" />
+    <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="35" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="TipoFactura" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="Estatus" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="Pedimento" Type="nvarchar" MaxLength="75" />
+    <Property Name="FechaAplicacion" Type="date" />
+    <Property Name="Vendedor" Type="nvarchar" MaxLength="75" />
+    <Property Name="NumeroCuentaPago" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="facturas_partida">
+    <Key>
+      <PropertyRef Name="idPartida" />
+    </Key>
+    <Property Name="idPartida" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idFactura" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" />
+    <Property Name="idEnsamble" Type="int" />
+    <Property Name="Cantidad" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Desc1" Type="decimal" Scale="2" />
+    <Property Name="Desc2" Type="decimal" Scale="2" />
+    <Property Name="IEPS" Type="decimal" Scale="2" />
+    <Property Name="Imp1" Type="decimal" Scale="2" />
+    <Property Name="Imp2" Type="decimal" Scale="2" />
+    <Property Name="Iva" Type="decimal" Scale="2" />
+    <Property Name="Comision" Type="decimal" Scale="2" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="faltantes">
+    <Key>
+      <PropertyRef Name="idFaltante" />
+    </Key>
+    <Property Name="idFaltante" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idReceta" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="inventario">
+    <Key>
+      <PropertyRef Name="idInventarioMov" />
+    </Key>
+    <Property Name="idInventarioMov" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idTipoMovimiento" Type="int" Nullable="false" />
+    <Property Name="idLineaCredito" Type="int" Nullable="false" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="idAlmacenSalida" Type="int" />
+    <Property Name="Concepto" Type="nvarchar" MaxLength="25" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pedimento" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="inventario_partida">
+    <Key>
+      <PropertyRef Name="idPartidaInv" />
+    </Key>
+    <Property Name="idPartidaInv" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idInventarioMov" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="Lote" Type="nvarchar" MaxLength="75" />
+    <Property Name="NoSerie" Type="nvarchar" MaxLength="75" />
+    <Property Name="Cantidad" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="lineas_creditos">
+    <Key>
+      <PropertyRef Name="idLineaCredito" />
+    </Key>
+    <Property Name="idLineaCredito" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Clave" Type="nvarchar" MaxLength="15" />
+    <Property Name="InstitucionEmisora" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="FuenteCuenta" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumeroCuenta" Type="nvarchar" MaxLength="25" />
+    <Property Name="Monto" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="FechaMinistracion" Type="date" />
+    <Property Name="FechaVencimiento" Type="date" Nullable="false" />
+    <Property Name="Campo1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo5" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo6" Type="int" />
+    <Property Name="Campo7" Type="int" />
+    <Property Name="Campo8" Type="int" />
+    <Property Name="Campo9" Type="decimal" Scale="2" />
+    <Property Name="Campo10" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="metodo_pago">
+    <Key>
+      <PropertyRef Name="idMetodoPago" />
+    </Key>
+    <Property Name="idMetodoPago" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MetodoPago" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="municipios">
+    <Key>
+      <PropertyRef Name="idMunicipio" />
+    </Key>
+    <Property Name="idMunicipio" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pedidos">
+    <Key>
+      <PropertyRef Name="idPedido" />
+    </Key>
+    <Property Name="idPedido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Estatus" Type="nvarchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="pedidos_partida">
+    <Key>
+      <PropertyRef Name="idPartida" />
+    </Key>
+    <Property Name="idPartida" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPedido" Type="int" Nullable="false" />
+    <Property Name="idEnsamble" Type="int" />
+    <Property Name="idProducto" Type="int" />
+    <Property Name="Cantidad" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Desc1" Type="decimal" Scale="2" />
+    <Property Name="Desc2" Type="decimal" Scale="2" />
+    <Property Name="IEPS" Type="decimal" Scale="2" />
+    <Property Name="Imp1" Type="decimal" Scale="2" />
+    <Property Name="Imp2" Type="decimal" Scale="2" />
+    <Property Name="Iva" Type="decimal" Scale="2" />
+    <Property Name="Comision" Type="decimal" Scale="2" />
+    <Property Name="Precio" Type="decimal" Scale="2" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="perfiles">
+    <Key>
+      <PropertyRef Name="idPerfil" />
+    </Key>
+    <Property Name="idPerfil" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Descrpcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="permisos">
+    <Key>
+      <PropertyRef Name="idPermiso" />
+    </Key>
+    <Property Name="idPermiso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="permisos_perfiles">
+    <Key>
+      <PropertyRef Name="idPermisoPerfil" />
+    </Key>
+    <Property Name="idPermisoPerfil" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPerfil" Type="int" Nullable="false" />
+    <Property Name="idPermiso" Type="int" Nullable="false" />
+    <Property Name="TipoAcceso" Type="nvarchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="permisos_usuarios">
+    <Key>
+      <PropertyRef Name="idPermisoUsuario" />
+    </Key>
+    <Property Name="idPermisoUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPermiso" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="TipoAcceso" Type="nvarchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="poblaciones">
+    <Key>
+      <PropertyRef Name="idPoblacion" />
+    </Key>
+    <Property Name="idPoblacion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="idMunicipio" Type="int" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productos">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idTipoProducto" Type="int" Nullable="false" />
+    <Property Name="idTipoIva" Type="int" Nullable="false" />
+    <Property Name="Clave1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Clave2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Clave3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Clave4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Presentacion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Costeo" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="UnidadMedida" Type="nvarchar" MaxLength="5" />
+    <Property Name="DescripcionAdicional" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ubicacion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Categoria" Type="nvarchar" MaxLength="75" />
+    <Property Name="PrecioPublico" Type="decimal" Scale="2" />
+    <Property Name="Precio1" Type="decimal" Scale="2" />
+    <Property Name="Precio2" Type="decimal" Scale="2" />
+    <Property Name="Precio3" Type="decimal" Scale="2" />
+    <Property Name="PrecioMinimo" Type="decimal" Scale="2" />
+    <Property Name="TipoMoneda" Type="nvarchar" MaxLength="3" />
+    <Property Name="TasaIeps" Type="decimal" Scale="2" />
+    <Property Name="TasaImpuesto1" Type="decimal" Scale="2" />
+    <Property Name="TasaImpuesto2" Type="decimal" Scale="2" />
+    <Property Name="ManejaLote" Type="nvarchar" MaxLength="1" />
+    <Property Name="ManejaSeries" Type="nvarchar" MaxLength="1" />
+    <Property Name="StockMinimo" Type="int" />
+    <Property Name="StockMaximo" Type="int" />
+    <Property Name="DiasResurtido" Type="int" />
+    <Property Name="Pedimento" Type="nvarchar" MaxLength="75" />
+    <Property Name="Campo1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo5" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo6" Type="int" />
+    <Property Name="Campo7" Type="int" />
+    <Property Name="Campo8" Type="int" />
+    <Property Name="Campo9" Type="decimal" Scale="2" />
+    <Property Name="Campo10" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productos_almacen">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Lote" Type="nvarchar" MaxLength="75" />
+    <Property Name="NoSerie" Type="nvarchar" MaxLength="75" />
+    <Property Name="Bloqueado" Type="int" />
+    <Property Name="FechaCaducidad" Type="date" />
+    <Property Name="idLineaCredito" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productos_almacen_stocks">
+    <Key>
+      <PropertyRef Name="idProAlmStocks" />
+      <PropertyRef Name="idProducto" />
+      <PropertyRef Name="idAlmacen" />
+    </Key>
+    <Property Name="idProAlmStocks" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="StockMin" Type="int" />
+    <Property Name="StockMax" Type="int" />
+  </EntityType>
+  <EntityType Name="productos_lotes">
+    <Key>
+      <PropertyRef Name="idProductosLotes" />
+    </Key>
+    <Property Name="idProductosLotes" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="Lote" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="productos_series">
+    <Key>
+      <PropertyRef Name="idProductoSeries" />
+    </Key>
+    <Property Name="idProductoSeries" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="NumeroSerie" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="proveedores">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoProveedor" Type="int" Nullable="false" />
+    <Property Name="IdColonia" Type="int" Nullable="false" />
+    <Property Name="IdMunicipio" Type="int" Nullable="false" />
+    <Property Name="IdPoblacion" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="TipoPersona" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="75" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="Curp" Type="nvarchar" MaxLength="18" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="75" />
+    <Property Name="NumeroExt" Type="nvarchar" MaxLength="10" />
+    <Property Name="NumeroInt" Type="nvarchar" MaxLength="10" />
+    <Property Name="CodigoPostal" Type="nvarchar" MaxLength="5" />
+    <Property Name="Campo1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo5" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo6" Type="int" />
+    <Property Name="Campo7" Type="int" />
+    <Property Name="Campo8" Type="int" />
+    <Property Name="Campo9" Type="decimal" Scale="2" />
+    <Property Name="Campo10" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="proveedores_contactos">
+    <Key>
+      <PropertyRef Name="IdContactoProveedor" />
+    </Key>
+    <Property Name="IdContactoProveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="Apellidos" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="75" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="proveedores_productos">
+    <Key>
+      <PropertyRef Name="idProveedorProducto" />
+    </Key>
+    <Property Name="idProveedorProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="recetas">
+    <Key>
+      <PropertyRef Name="idReceta" />
+    </Key>
+    <Property Name="idReceta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idTipoReceta" Type="int" Nullable="false" />
+    <Property Name="idVendedor" Type="int" Nullable="false" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="idEstadoExp" Type="int" Nullable="false" />
+    <Property Name="idMunicipioExp" Type="int" Nullable="false" />
+    <Property Name="idPoblacionExp" Type="int" Nullable="false" />
+    <Property Name="idColoniaExp" Type="int" Nullable="false" />
+    <Property Name="idEstadoSur" Type="int" Nullable="false" />
+    <Property Name="idMunicipioSur" Type="int" Nullable="false" />
+    <Property Name="idPoblacionSur" Type="int" Nullable="false" />
+    <Property Name="idColoniaSur" Type="int" Nullable="false" />
+    <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="ClaveMed" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Paciente" Type="nvarchar" MaxLength="100" />
+    <Property Name="Domicilio" Type="nvarchar" MaxLength="75" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="EstatusMedico" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="Estatus" Type="nvarchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="recetas_partida">
+    <Key>
+      <PropertyRef Name="idRecetaPartida" />
+    </Key>
+    <Property Name="idRecetaPartida" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idReceta" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" />
+    <Property Name="idEnsamble" Type="int" />
+    <Property Name="idLineaCredito" Type="int" Nullable="false" />
+    <Property Name="idCausesCie" Type="int" />
+    <Property Name="CantidadRecetada" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="CantidaSurtida" Type="decimal" Scale="2" />
+    <Property Name="Precio" Type="decimal" Scale="2" />
+    <Property Name="Lote" Type="nvarchar" MaxLength="75" />
+    <Property Name="NoSerie" Type="nvarchar" MaxLength="75" />
+    <Property Name="PrimeraIntencion" Type="bit" />
+    <Property Name="SegundaIntencion" Type="bit" />
+    <Property Name="Cause" Type="bit" />
+    <Property Name="Factura" Type="bit" />
+  </EntityType>
+  <EntityType Name="recetas_partida_faltantes">
+    <Key>
+      <PropertyRef Name="idRecetasPartidaFaltantes" />
+    </Key>
+    <Property Name="idRecetasPartidaFaltantes" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idReceta" Type="int" Nullable="false" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" />
+  </EntityType>
+  <EntityType Name="remisiones">
+    <Key>
+      <PropertyRef Name="idRemision" />
+    </Key>
+    <Property Name="idRemision" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPedido" Type="int" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Estatus" Type="nvarchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="remisiones_partida">
+    <Key>
+      <PropertyRef Name="idPartida" />
+    </Key>
+    <Property Name="idPartida" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idRemision" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" />
+    <Property Name="idEnsamble" Type="int" />
+    <Property Name="Cantidad" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Desc1" Type="decimal" Scale="2" />
+    <Property Name="Desc2" Type="decimal" Scale="2" />
+    <Property Name="IEPS" Type="decimal" Scale="2" />
+    <Property Name="Imp1" Type="decimal" Scale="2" />
+    <Property Name="Imp2" Type="decimal" Scale="2" />
+    <Property Name="Iva" Type="decimal" Scale="2" />
+    <Property Name="Comision" Type="decimal" Scale="2" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tipo_forma_pago">
+    <Key>
+      <PropertyRef Name="idTipoFormaPago" />
+    </Key>
+    <Property Name="idTipoFormaPago" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormaPago" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tipo_iva">
+    <Key>
+      <PropertyRef Name="idTipoIva" />
+    </Key>
+    <Property Name="idTipoIva" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Zona" Type="nvarchar" MaxLength="25" />
+    <Property Name="Iva" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="tipo_movientos">
+    <Key>
+      <PropertyRef Name="idTipoMovimiento" />
+    </Key>
+    <Property Name="idTipoMovimiento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoMovimiento" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tipos">
+    <Key>
+      <PropertyRef Name="idTipo" />
+    </Key>
+    <Property Name="idTipo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="Almacenes" Type="bit" />
+    <Property Name="Clientes" Type="bit" />
+    <Property Name="Productos" Type="bit" />
+    <Property Name="Proveedores" Type="bit" />
+    <Property Name="Vendedores" Type="bit" />
+    <Property Name="Recetas" Type="bit" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idAlmacen" Type="int" Nullable="false" />
+    <Property Name="idPerfil" Type="int" Nullable="false" />
+    <Property Name="FiltradoActivado" Type="bit" />
+    <Property Name="Usuario" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Contrasena" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="75" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+    <Property Name="Campo1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo5" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo6" Type="int" />
+    <Property Name="Campo7" Type="int" />
+    <Property Name="Campo8" Type="int" />
+    <Property Name="Campo9" Type="decimal" Scale="2" />
+    <Property Name="Campo10" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vendedores">
+    <Key>
+      <PropertyRef Name="idVendedor" />
+    </Key>
+    <Property Name="idVendedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoVendedor" Type="int" Nullable="false" />
+    <Property Name="IdColonia" Type="int" Nullable="false" />
+    <Property Name="IdPoblacion" Type="int" Nullable="false" />
+    <Property Name="IdMunicipio" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdEspecialidad" Type="int" Nullable="false" />
+    <Property Name="IdVinculacion" Type="int" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="75" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="75" />
+    <Property Name="TipoPersona" Type="nvarchar" MaxLength="50" />
+    <Property Name="CedulaProfesional" Type="nvarchar" MaxLength="25" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="Curp" Type="nvarchar" MaxLength="18" />
+    <Property Name="TituloExpedido" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="75" />
+    <Property Name="NumeroExt" Type="nvarchar" MaxLength="5" />
+    <Property Name="NumeroInt" Type="nvarchar" MaxLength="5" />
+    <Property Name="CodigoPostal" Type="nvarchar" MaxLength="5" />
+    <Property Name="Campo1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo4" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo5" Type="nvarchar" MaxLength="25" />
+    <Property Name="Campo6" Type="int" />
+    <Property Name="Campo7" Type="int" />
+    <Property Name="Campo8" Type="int" />
+    <Property Name="Campo9" Type="decimal" Scale="2" />
+    <Property Name="Campo10" Type="decimal" Scale="2" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vendedores_especialidad">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Especialidad" Type="nvarchar" Nullable="false" MaxLength="75" />
+  </EntityType>
+  <EntityType Name="vendedores_vinculacion">
+    <Key>
+      <PropertyRef Name="idVinculacion" />
+    </Key>
+    <Property Name="idVinculacion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Vinculacion" Type="nvarchar" MaxLength="75" />
+  </EntityType>
+  <Association Name="FK_almacenes_colonias1">
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="1" />
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="idColonia" />
+      </Principal>
+      <Dependent Role="almacenes">
+        <PropertyRef Name="idColonia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_almacenes_contactos_almacenes1">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="almacenes_contactos" Type="medicuriModel.Store.almacenes_contactos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="almacenes_contactos">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_almacenes_estados1">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="almacenes">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_almacenes_municipios">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="almacenes">
+        <PropertyRef Name="idMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_almacenes_poblaciones">
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="1" />
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="poblaciones">
+        <PropertyRef Name="idPoblacion" />
+      </Principal>
+      <Dependent Role="almacenes">
+        <PropertyRef Name="idPoblacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_almacenes_tipos">
+    <End Role="tipos" Type="medicuriModel.Store.tipos" Multiplicity="1" />
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipos">
+        <PropertyRef Name="idTipo" />
+      </Principal>
+      <Dependent Role="almacenes">
+        <PropertyRef Name="idTipoAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_bitacora_faltantes_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="bitacora_faltantes" Type="medicuriModel.Store.bitacora_faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="bitacora_faltantes">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_bitacora_faltantes_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="bitacora_faltantes" Type="medicuriModel.Store.bitacora_faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="bitacora_faltantes">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_bitacora_faltantes_recetas">
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="1" />
+    <End Role="bitacora_faltantes" Type="medicuriModel.Store.bitacora_faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="recetas">
+        <PropertyRef Name="idReceta" />
+      </Principal>
+      <Dependent Role="bitacora_faltantes">
+        <PropertyRef Name="idReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_causes_cie_causes">
+    <End Role="causes" Type="medicuriModel.Store.causes" Multiplicity="1" />
+    <End Role="causes_cie" Type="medicuriModel.Store.causes_cie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="causes">
+        <PropertyRef Name="idCause" />
+      </Principal>
+      <Dependent Role="causes_cie">
+        <PropertyRef Name="idCause" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_causes_medicamentos_causes">
+    <End Role="causes" Type="medicuriModel.Store.causes" Multiplicity="1" />
+    <End Role="causes_medicamentos" Type="medicuriModel.Store.causes_medicamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="causes">
+        <PropertyRef Name="idCause" />
+      </Principal>
+      <Dependent Role="causes_medicamentos">
+        <PropertyRef Name="idCause" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_causes_medicamentos_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="causes_medicamentos" Type="medicuriModel.Store.causes_medicamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="causes_medicamentos">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_colonias">
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="1" />
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="idColonia" />
+      </Principal>
+      <Dependent Role="clientes">
+        <PropertyRef Name="idColonia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_contacto_clientes">
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="1" />
+    <End Role="clientes_contacto" Type="medicuriModel.Store.clientes_contacto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="clientes_contacto">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_estados">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="clientes">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_municipios">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="clientes">
+        <PropertyRef Name="idMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_poblaciones">
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="1" />
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="poblaciones">
+        <PropertyRef Name="idPoblacion" />
+      </Principal>
+      <Dependent Role="clientes">
+        <PropertyRef Name="idPoblacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_tipos">
+    <End Role="tipos" Type="medicuriModel.Store.tipos" Multiplicity="1" />
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipos">
+        <PropertyRef Name="idTipo" />
+      </Principal>
+      <Dependent Role="clientes">
+        <PropertyRef Name="idTipoCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_colonias_estados">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="colonias">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_colonias_municipios">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="colonias">
+        <PropertyRef Name="IdMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_colonias_poblaciones">
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="1" />
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="poblaciones">
+        <PropertyRef Name="idPoblacion" />
+      </Principal>
+      <Dependent Role="colonias">
+        <PropertyRef Name="IdPoblacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ensamble_productos_ensamble">
+    <End Role="ensamble" Type="medicuriModel.Store.ensamble" Multiplicity="1" />
+    <End Role="ensamble_productos" Type="medicuriModel.Store.ensamble_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ensamble">
+        <PropertyRef Name="idEnsamble" />
+      </Principal>
+      <Dependent Role="ensamble_productos">
+        <PropertyRef Name="idEnsamble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ensamble_productos_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="ensamble_productos" Type="medicuriModel.Store.ensamble_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ensamble_productos">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturacionDeRecetas_lineas_creditos">
+    <End Role="lineas_creditos" Type="medicuriModel.Store.lineas_creditos" Multiplicity="1" />
+    <End Role="FacturacionDeRecetas" Type="medicuriModel.Store.FacturacionDeRecetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lineas_creditos">
+        <PropertyRef Name="idLineaCredito" />
+      </Principal>
+      <Dependent Role="FacturacionDeRecetas">
+        <PropertyRef Name="idLineaCredito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_facturas">
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="1" />
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_metodo_pago">
+    <End Role="metodo_pago" Type="medicuriModel.Store.metodo_pago" Multiplicity="1" />
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="metodo_pago">
+        <PropertyRef Name="idMetodoPago" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="idMetodoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_partida_ensamble">
+    <End Role="ensamble" Type="medicuriModel.Store.ensamble" Multiplicity="0..1" />
+    <End Role="facturas_partida" Type="medicuriModel.Store.facturas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ensamble">
+        <PropertyRef Name="idEnsamble" />
+      </Principal>
+      <Dependent Role="facturas_partida">
+        <PropertyRef Name="idEnsamble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_partida_facturas">
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="1" />
+    <End Role="facturas_partida" Type="medicuriModel.Store.facturas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="facturas">
+        <PropertyRef Name="idFactura" />
+      </Principal>
+      <Dependent Role="facturas_partida">
+        <PropertyRef Name="idFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_partida_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="0..1" />
+    <End Role="facturas_partida" Type="medicuriModel.Store.facturas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="facturas_partida">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_pedidos">
+    <End Role="pedidos" Type="medicuriModel.Store.pedidos" Multiplicity="0..1" />
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedidos">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_recetas">
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="0..1" />
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="recetas">
+        <PropertyRef Name="idReceta" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="idReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_remisiones">
+    <End Role="remisiones" Type="medicuriModel.Store.remisiones" Multiplicity="0..1" />
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="remisiones">
+        <PropertyRef Name="idRemision" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="idRemision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_Tipo_forma_pago">
+    <End Role="tipo_forma_pago" Type="medicuriModel.Store.tipo_forma_pago" Multiplicity="1" />
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_forma_pago">
+        <PropertyRef Name="idTipoFormaPago" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="idTipoFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_facturas_usuarios">
+    <End Role="usuarios" Type="medicuriModel.Store.usuarios" Multiplicity="0..1" />
+    <End Role="facturas" Type="medicuriModel.Store.facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faltantes_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="faltantes" Type="medicuriModel.Store.faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="faltantes">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faltantes_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="faltantes" Type="medicuriModel.Store.faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="faltantes">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inventario_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="inventario" Type="medicuriModel.Store.inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="inventario">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inventario_almacenesSalida">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="0..1" />
+    <End Role="inventario" Type="medicuriModel.Store.inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="inventario">
+        <PropertyRef Name="idAlmacenSalida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inventario_partida_inventario">
+    <End Role="inventario" Type="medicuriModel.Store.inventario" Multiplicity="1" />
+    <End Role="inventario_partida" Type="medicuriModel.Store.inventario_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventario">
+        <PropertyRef Name="idInventarioMov" />
+      </Principal>
+      <Dependent Role="inventario_partida">
+        <PropertyRef Name="idInventarioMov" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inventario_partida_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="inventario_partida" Type="medicuriModel.Store.inventario_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="inventario_partida">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_municipios_estados">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="municipios">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_clientes">
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="1" />
+    <End Role="pedidos" Type="medicuriModel.Store.pedidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="pedidos">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_partida_ensamble">
+    <End Role="ensamble" Type="medicuriModel.Store.ensamble" Multiplicity="0..1" />
+    <End Role="pedidos_partida" Type="medicuriModel.Store.pedidos_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ensamble">
+        <PropertyRef Name="idEnsamble" />
+      </Principal>
+      <Dependent Role="pedidos_partida">
+        <PropertyRef Name="idEnsamble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_partida_pedidos">
+    <End Role="pedidos" Type="medicuriModel.Store.pedidos" Multiplicity="1" />
+    <End Role="pedidos_partida" Type="medicuriModel.Store.pedidos_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedidos">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="pedidos_partida">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_partida_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="0..1" />
+    <End Role="pedidos_partida" Type="medicuriModel.Store.pedidos_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="pedidos_partida">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_permisos_perfiles_perfiles">
+    <End Role="perfiles" Type="medicuriModel.Store.perfiles" Multiplicity="1" />
+    <End Role="permisos_perfiles" Type="medicuriModel.Store.permisos_perfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="perfiles">
+        <PropertyRef Name="idPerfil" />
+      </Principal>
+      <Dependent Role="permisos_perfiles">
+        <PropertyRef Name="idPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_permisos_perfiles_permisos">
+    <End Role="permisos" Type="medicuriModel.Store.permisos" Multiplicity="1" />
+    <End Role="permisos_perfiles" Type="medicuriModel.Store.permisos_perfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="permisos">
+        <PropertyRef Name="idPermiso" />
+      </Principal>
+      <Dependent Role="permisos_perfiles">
+        <PropertyRef Name="idPermiso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_permisos_usuarios_permisos">
+    <End Role="permisos" Type="medicuriModel.Store.permisos" Multiplicity="1" />
+    <End Role="permisos_usuarios" Type="medicuriModel.Store.permisos_usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="permisos">
+        <PropertyRef Name="idPermiso" />
+      </Principal>
+      <Dependent Role="permisos_usuarios">
+        <PropertyRef Name="idPermiso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_permisos_usuarios_usuarios">
+    <End Role="usuarios" Type="medicuriModel.Store.usuarios" Multiplicity="1" />
+    <End Role="permisos_usuarios" Type="medicuriModel.Store.permisos_usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="permisos_usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_poblaciones_estados">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="poblaciones">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_poblaciones_municipios">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="poblaciones">
+        <PropertyRef Name="idMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_almacen_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="productos_almacen" Type="medicuriModel.Store.productos_almacen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="productos_almacen">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_almacen_lineas_creditos">
+    <End Role="lineas_creditos" Type="medicuriModel.Store.lineas_creditos" Multiplicity="1" />
+    <End Role="productos_almacen" Type="medicuriModel.Store.productos_almacen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lineas_creditos">
+        <PropertyRef Name="idLineaCredito" />
+      </Principal>
+      <Dependent Role="productos_almacen">
+        <PropertyRef Name="idLineaCredito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_almacen_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="productos_almacen" Type="medicuriModel.Store.productos_almacen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="productos_almacen">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Almacen_Stocks_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="productos_almacen_stocks" Type="medicuriModel.Store.productos_almacen_stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="productos_almacen_stocks">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Almacen_Stocks_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="productos_almacen_stocks" Type="medicuriModel.Store.productos_almacen_stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="productos_almacen_stocks">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_lotes_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="productos_lotes" Type="medicuriModel.Store.productos_lotes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="productos_lotes">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_series_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="productos_series" Type="medicuriModel.Store.productos_series" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="productos_series">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_tipo_iva">
+    <End Role="tipo_iva" Type="medicuriModel.Store.tipo_iva" Multiplicity="1" />
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_iva">
+        <PropertyRef Name="idTipoIva" />
+      </Principal>
+      <Dependent Role="productos">
+        <PropertyRef Name="idTipoIva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_tipos">
+    <End Role="tipos" Type="medicuriModel.Store.tipos" Multiplicity="1" />
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipos">
+        <PropertyRef Name="idTipo" />
+      </Principal>
+      <Dependent Role="productos">
+        <PropertyRef Name="idTipoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_colonias">
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="1" />
+    <End Role="proveedores" Type="medicuriModel.Store.proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="idColonia" />
+      </Principal>
+      <Dependent Role="proveedores">
+        <PropertyRef Name="IdColonia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_contactos_proveedores">
+    <End Role="proveedores" Type="medicuriModel.Store.proveedores" Multiplicity="1" />
+    <End Role="proveedores_contactos" Type="medicuriModel.Store.proveedores_contactos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="proveedores">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="proveedores_contactos">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_estados">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="proveedores" Type="medicuriModel.Store.proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="proveedores">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_municipios">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="proveedores" Type="medicuriModel.Store.proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="proveedores">
+        <PropertyRef Name="IdMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_poblaciones">
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="1" />
+    <End Role="proveedores" Type="medicuriModel.Store.proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="poblaciones">
+        <PropertyRef Name="idPoblacion" />
+      </Principal>
+      <Dependent Role="proveedores">
+        <PropertyRef Name="IdPoblacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_productos_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="proveedores_productos" Type="medicuriModel.Store.proveedores_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="proveedores_productos">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_productos_proveedores">
+    <End Role="proveedores" Type="medicuriModel.Store.proveedores" Multiplicity="1" />
+    <End Role="proveedores_productos" Type="medicuriModel.Store.proveedores_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="proveedores">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="proveedores_productos">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_proveedores_tipos">
+    <End Role="tipos" Type="medicuriModel.Store.tipos" Multiplicity="1" />
+    <End Role="proveedores" Type="medicuriModel.Store.proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipos">
+        <PropertyRef Name="idTipo" />
+      </Principal>
+      <Dependent Role="proveedores">
+        <PropertyRef Name="IdTipoProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_clientes">
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_colonias">
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="idColonia" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idColoniaExp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_colonias1">
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="idColonia" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idColoniaSur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_estados">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idEstadoExp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_estados1">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idEstadoSur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_municipios">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idMunicipioExp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_municipios1">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idMunicipioSur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_causes_cie">
+    <End Role="causes_cie" Type="medicuriModel.Store.causes_cie" Multiplicity="0..1" />
+    <End Role="recetas_partida" Type="medicuriModel.Store.recetas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="causes_cie">
+        <PropertyRef Name="idCauseCie" />
+      </Principal>
+      <Dependent Role="recetas_partida">
+        <PropertyRef Name="idCausesCie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_ensamble">
+    <End Role="ensamble" Type="medicuriModel.Store.ensamble" Multiplicity="0..1" />
+    <End Role="recetas_partida" Type="medicuriModel.Store.recetas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ensamble">
+        <PropertyRef Name="idEnsamble" />
+      </Principal>
+      <Dependent Role="recetas_partida">
+        <PropertyRef Name="idEnsamble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_faltantes_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="recetas_partida_faltantes" Type="medicuriModel.Store.recetas_partida_faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="recetas_partida_faltantes">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_faltantes_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="1" />
+    <End Role="recetas_partida_faltantes" Type="medicuriModel.Store.recetas_partida_faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="recetas_partida_faltantes">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_faltantes_recetas">
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="1" />
+    <End Role="recetas_partida_faltantes" Type="medicuriModel.Store.recetas_partida_faltantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="recetas">
+        <PropertyRef Name="idReceta" />
+      </Principal>
+      <Dependent Role="recetas_partida_faltantes">
+        <PropertyRef Name="idReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_lineas_creditos">
+    <End Role="lineas_creditos" Type="medicuriModel.Store.lineas_creditos" Multiplicity="1" />
+    <End Role="recetas_partida" Type="medicuriModel.Store.recetas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lineas_creditos">
+        <PropertyRef Name="idLineaCredito" />
+      </Principal>
+      <Dependent Role="recetas_partida">
+        <PropertyRef Name="idLineaCredito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="0..1" />
+    <End Role="recetas_partida" Type="medicuriModel.Store.recetas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="recetas_partida">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_partida_recetas">
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="1" />
+    <End Role="recetas_partida" Type="medicuriModel.Store.recetas_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="recetas">
+        <PropertyRef Name="idReceta" />
+      </Principal>
+      <Dependent Role="recetas_partida">
+        <PropertyRef Name="idReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_poblaciones">
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="poblaciones">
+        <PropertyRef Name="idPoblacion" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idPoblacionExp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_poblaciones1">
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="poblaciones">
+        <PropertyRef Name="idPoblacion" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idPoblacionSur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_tipos">
+    <End Role="tipos" Type="medicuriModel.Store.tipos" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipos">
+        <PropertyRef Name="idTipo" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idTipoReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_recetas_vendedores">
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="1" />
+    <End Role="recetas" Type="medicuriModel.Store.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendedores">
+        <PropertyRef Name="idVendedor" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="idVendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_remisiones_clientes">
+    <End Role="clientes" Type="medicuriModel.Store.clientes" Multiplicity="1" />
+    <End Role="remisiones" Type="medicuriModel.Store.remisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="remisiones">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_remisiones_partida_ensamble">
+    <End Role="ensamble" Type="medicuriModel.Store.ensamble" Multiplicity="0..1" />
+    <End Role="remisiones_partida" Type="medicuriModel.Store.remisiones_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ensamble">
+        <PropertyRef Name="idEnsamble" />
+      </Principal>
+      <Dependent Role="remisiones_partida">
+        <PropertyRef Name="idEnsamble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_remisiones_partida_productos">
+    <End Role="productos" Type="medicuriModel.Store.productos" Multiplicity="0..1" />
+    <End Role="remisiones_partida" Type="medicuriModel.Store.remisiones_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="remisiones_partida">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_remisiones_partida_remisiones">
+    <End Role="remisiones" Type="medicuriModel.Store.remisiones" Multiplicity="1" />
+    <End Role="remisiones_partida" Type="medicuriModel.Store.remisiones_partida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="remisiones">
+        <PropertyRef Name="idRemision" />
+      </Principal>
+      <Dependent Role="remisiones_partida">
+        <PropertyRef Name="idRemision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuarios_almacenes">
+    <End Role="almacenes" Type="medicuriModel.Store.almacenes" Multiplicity="1" />
+    <End Role="usuarios" Type="medicuriModel.Store.usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacenes">
+        <PropertyRef Name="idAlmacen" />
+      </Principal>
+      <Dependent Role="usuarios">
+        <PropertyRef Name="idAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuarios_perfiles">
+    <End Role="perfiles" Type="medicuriModel.Store.perfiles" Multiplicity="1" />
+    <End Role="usuarios" Type="medicuriModel.Store.usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="perfiles">
+        <PropertyRef Name="idPerfil" />
+      </Principal>
+      <Dependent Role="usuarios">
+        <PropertyRef Name="idPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendedores_colonias">
+    <End Role="colonias" Type="medicuriModel.Store.colonias" Multiplicity="1" />
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="idColonia" />
+      </Principal>
+      <Dependent Role="vendedores">
+        <PropertyRef Name="IdColonia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendedores_estados">
+    <End Role="estados" Type="medicuriModel.Store.estados" Multiplicity="1" />
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="vendedores">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendedores_municipios">
+    <End Role="municipios" Type="medicuriModel.Store.municipios" Multiplicity="1" />
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipios">
+        <PropertyRef Name="idMunicipio" />
+      </Principal>
+      <Dependent Role="vendedores">
+        <PropertyRef Name="IdMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendedores_poblaciones">
+    <End Role="poblaciones" Type="medicuriModel.Store.poblaciones" Multiplicity="1" />
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="poblaciones">
+        <PropertyRef Name="idPoblacion" />
+      </Principal>
+      <Dependent Role="vendedores">
+        <PropertyRef Name="IdPoblacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendedores_tipos">
+    <End Role="tipos" Type="medicuriModel.Store.tipos" Multiplicity="1" />
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipos">
+        <PropertyRef Name="idTipo" />
+      </Principal>
+      <Dependent Role="vendedores">
+        <PropertyRef Name="IdTipoVendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendedores_vendedores_especialidad">
+    <End Role="vendedores_especialidad" Type="medicuriModel.Store.vendedores_especialidad" Multiplicity="1" />
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendedores_especialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="vendedores">
+        <PropertyRef Name="IdEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendedores_vendedores_vinculacion">
+    <End Role="vendedores_vinculacion" Type="medicuriModel.Store.vendedores_vinculacion" Multiplicity="1" />
+    <End Role="vendedores" Type="medicuriModel.Store.vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendedores_vinculacion">
+        <PropertyRef Name="idVinculacion" />
+      </Principal>
+      <Dependent Role="vendedores">
+        <PropertyRef Name="IdVinculacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
